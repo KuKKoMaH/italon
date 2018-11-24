@@ -1,0 +1,52 @@
+.button
+  vc()
+  color: white
+  font-size: 16px
+  line-height: 1
+  border: 0
+  padding: 0 23px
+  height: 45px
+  text-align: center
+  //line-height: 45px
+  border-radius: 23px
+  background-color brick
+  box-shadow 0 2px 14px 0 brick
+  position: relative
+  cursor: pointer
+  text-decoration: none
+  anim()
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: -4px
+    right: -4px
+    bottom: -4px
+    left: -4px
+    border solid 1px brick
+    opacity 0.2
+    border-radius: 27px
+    anim()
+
+  &:after
+    content: ''
+    height: 100%
+    vc()
+
+  &:hover
+    box-shadow 0 2px 14px 0 rgba(brick, .6)
+
+    &:before
+      top: -6px
+      right: -6px
+      bottom: -6px
+      left: -6px
+      border-radius: 28px
+
+  &:active
+    color: #D59E9C
+    box-shadow none
+    &:before
+      background: #B52121
+      opacity: 0

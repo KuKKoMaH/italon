@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>sprite-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sprite-arrow" fill="#000000">
+            <path d="M5.64922219,5.72096294 C5.27650391,6.09429658 4.6753889,6.09293239 4.30401942,5.71732509 L0.279201511,1.64657871 C-0.0930671702,1.27006196 -0.0930671702,0.658904324 0.279201511,0.282387567 C0.651470192,-0.0941291891 1.2557324,-0.0941291891 1.62800108,0.282387567 L5,3.69286543 L8.37199892,0.282387567 C8.7442676,-0.0941291891 9.34852981,-0.0941291891 9.72079849,0.282387567 C10.0930672,0.658904324 10.0930672,1.27006196 9.72079849,1.64657871 C9.72079849,1.64657871 6.95935617,4.41042998 5.64922219,5.72096294 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

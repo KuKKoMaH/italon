@@ -1,0 +1,11 @@
+- var items = ['Пороги', 'Авто с проблемными порогами', 'Срезанные пороги', 'Прихваченные и зашпаклеванные', 'Покрашенные пороги', 'Авто с порогами в городе']
+#process.process-container
+  .w: .c.c12: .process-title Наши пороги отлично монтируются - вы не отличите их от оригинальных!
+  .process-subtitle Посмотрите пример монтажа порогов:
+  .w
+    each item in items
+      .c.c2.c4-md.c6-sm: a.process-item(href='http://placehold.it/1000x1000' data-width=1000 data-height=1000)
+        .process-image
+          img(src='http://placehold.it/165x290')
+          .process-desc Краткое описание этапа или что там
+        .process-name= item

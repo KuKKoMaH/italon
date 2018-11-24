@@ -1,0 +1,20 @@
+include ../button/button
+
+- var items = [];
+- items.push('Оставляете заявку - мы перезваниваем и уточняем адрес доставки');
+- items.push('Упаковываем и отправляем посылку, высылаем номер отслеживания');
+- items.push('Получаете-проверяете и забираете комплект порогов');
+- items.push('Оплачиваете после проверки');
+.delivery-container
+  .w
+    .c.c12
+      .delivery-title Доставка и оплата
+      .delivery-subtitle Отправляем пороги любыми транспортными компаниями: «СДЭК», «КИТ», «ПЭК», «Деловые линии»
+    each text, i in items
+      .c.c3
+        .delivery-icon(class='delivery-icon-' + (i + 1))
+        .delivery-number= (i + 1) + '.'
+        .delivery-text
+          = text
+          if(i == 0)
+            .delivery-button: +button('a', '#callback')(class='popup-opener') Оставить заявку

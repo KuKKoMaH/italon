@@ -1,0 +1,20 @@
+- var items = [];
+- items.push({href:'#form', title: 'Выбор порогов'})
+- items.push({href:'#prices', title: 'Стоимость'})
+- items.push({href:'#process', title: 'Пример монтажа'})
+- items.push({href:'#testimonials', title: 'Отзывы'})
+- items.push({href:'#faq', title: 'Вопросы-ответы'})
+
+.header-header
+  .w.fh
+    .c.c9.header-menu-wrapper
+      a.header-logo(href='#top')
+      nav.header-menu
+        each item in items
+          .header-menu-item.vc
+            a.header-menu-item-inner(href=item.href)=item.title
+      a.header-close(href='#'): .header-close-icon
+    .c.c3.fh
+      a.header-hamburger(href='#')
+      .header-phone
+        .header-phone-number 8 800 777-00-55

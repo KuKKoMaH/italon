@@ -1,0 +1,59 @@
+.container
+  background-color greyish-brown
+  padding: 40px 0 30px
+  color: white
+
+.left
+  padding-left: 98px
+
+  @media (max-width: $breakpoint-md - 1)
+    padding-left: 0
+
+.logo
+  background: url(sprites/sprite-logo.svg)
+  margin-bottom: 5px
+
+.socials
+  margin-top: 10px
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-bottom: 20px
+
+.icon
+  vc()
+  margin-right: 10px
+  margin-top: 10px
+  anim()
+
+  &:hover
+    opacity: .7
+
+.vk
+  background: url(modules/footer/sprite-vk.png)
+.instagram
+  background: url(modules/footer/sprite-instagram.png)
+.autoru
+  background: url(modules/footer/sprite-autoru.png)
+.drive
+  background: url(modules/footer/sprite-drive.png)
+
+.text
+  opacity: .5
+  font-size: .9em
+  font-weight: 300
+  @media (max-width: $breakpoint-md - 1)
+    font-size: .8em
+
+.phone
+  font-size: 2em
+  margin: 8px 0
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: 1.3em
+
+.policy
+  display: inline-block
+  margin-top: 1em
+
+  &:hover
+    text-decoration: none

@@ -1,0 +1,4 @@
+mixin button(tag, href)
+  - if(!tag) tag = 'button'
+  #{tag}.button-button(href=href type='submit' class!=attributes.class)
+    block

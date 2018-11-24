@@ -1,0 +1,45 @@
+.container
+  background-color greyish-brown
+  color beige-two
+  font-weight 300
+  padding: 170px 0 10px
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 20px
+
+.item
+  padding-left: 100px
+  margin-bottom: 70px
+  position: relative
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 50px
+    top: 3px
+    transform: translateX(-50%)
+
+  @media (max-width: $breakpoint-md - 1)
+    padding-left: 65px
+    margin-bottom: 40px
+
+    &:before
+      left: 30px
+
+icons = 'modules/advantages/sprite-adv-1.svg'  'modules/advantages/sprite-adv-2.svg'  'modules/advantages/sprite-adv-3.svg'  'modules/advantages/sprite-adv-4.svg'  'modules/advantages/sprite-adv-5.svg'  'modules/advantages/sprite-adv-6.svg'
+
+for icon, i in icons
+  .i-{i+1}
+    &:before
+      background: url(icon)
+
+.link
+  display: block
+  opacity: .6
+  font-size: .8em
+  text-decoration: underline
+  cursor: pointer
+
+  &:hover
+    text-decoration: none

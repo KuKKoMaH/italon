@@ -1,0 +1,76 @@
+.container
+  background-color beige-two
+  padding: 70px 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 20px 0
+
+.col
+  padding-left: 98px
+
+  @media (max-width: $breakpoint-lg - 1)
+    padding-left: 0
+
+.title
+  display: inline-block
+  font-size: 1.7em
+  border-bottom: 4px solid scarlet
+  padding-bottom: 3px
+  margin-bottom: 35px
+
+  @media (max-width: $breakpoint-sm - 1)
+    font-size: 1.2em
+
+.contact
+  padding-left: 98px
+  position: relative
+  font-weight: 300
+  margin-bottom: 20px
+
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    left: 0
+    top: 8px
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-left: 60px
+
+
+  &-sub
+    font-size: 1.1em
+    font-weight: 500
+
+.call:before
+  background: url(sprites/sprite-call.svg)
+
+.mail:before
+  background: url(sprites/sprite-mail.svg)
+
+.text
+  font-size: 1.3em
+  font-weight: 300
+  margin-bottom: 12px
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: 1em
+
+.phone
+  font-size: 3em
+  margin-bottom: 20px
+
+  @media (max-width: $breakpoint-md - 1) and (min-width: $breakpoint-sm)
+    font-size: 2.5em
+
+  @media (max-width: $breakpoint-sm - 1)
+    font-size: 1.8em
+
+.button
+  display: inline-block
+  margin-left: 55px
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin: 8px 0 0 0
+    display: block
+    margin-top: 8px

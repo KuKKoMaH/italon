@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>sprite-adv-6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sprite-adv-6" fill-rule="nonzero" fill="#E7D3B7">
+            <g id="Group">
+                <path d="M22,0.793 C10.307,0.793 0.793,10.306 0.793,22 C0.793,33.693 10.307,43.207 22,43.207 C33.693,43.207 43.207,33.693 43.207,22 C43.207,10.306 33.693,0.793 22,0.793 Z M22,41.163 C11.434,41.163 2.837,32.566 2.837,22 C2.837,11.435 11.433,2.838 22,2.838 C32.567,2.838 41.162,11.435 41.162,22 C41.162,32.566 32.566,41.163 22,41.163 Z"
+                      id="Shape"></path>
+                <path d="M14.101,29.899 L25.518,25.517 L29.9,14.1 L18.483,18.483 L14.101,29.899 Z M26.346,17.653 L23.936,23.934 L17.655,26.344 L20.067,20.065 L26.346,17.653 Z"
+                      id="Shape"></path>
+                <rect id="Rectangle-path" x="19.625" y="4.425" width="2.044" height="2.727"></rect>
+                <polygon id="Rectangle-path"
+                         points="21.4569088 38.6036684 21.1840556 35.8833384 23.2178356 35.6793472 23.4906888 38.3996772"></polygon>
+                <polygon id="Rectangle-path"
+                         points="36.3717686 22.7991852 36.6950366 20.7789648 38.537525 21.0737928 38.214257 23.0940132"></polygon>
+                <rect id="Rectangle-path" x="3.837" y="21.577" width="2.272" height="2.045"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+include ../button/button
+
+mixin popup(id, title, text, button)
+  .popup-wrapper(id=id)
+    .popup-header
+      .popup-title=title
+    .popup-body
+      .popup-selected
+      .popup-text=text
+      form
+        input.popup-city(type='hidden' name='city')
+        input.popup-car(type='hidden' name='brand')
+        input.popup-car(type='hidden' name='model')
+        input.popup-car(type='hidden' name='generation')
+        input.popup-car(type='hidden' name='body')
+        input.popup-car(type='hidden' name='count')
+        .popup-input-wrapper: input.popup-input(type='tel')
+        .popup-button: +button()=button

@@ -1,0 +1,71 @@
+.container
+  padding: 75px 0 70px
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 20px 0
+
+.title
+  font-size: 2em
+  line-height: 1.2
+  margin: 0 auto 22px
+  text-align: center
+  max-width: 60%
+
+  @media (max-width: $breakpoint-md - 1)
+    max-width: 80%
+    font-size: 1.7em
+
+  @media (max-width: $breakpoint-sm - 1)
+    max-width: none
+    font-size: 1.5em
+
+.subtitle
+  font-size: 1.5em
+  font-weight: 300
+  margin-bottom: 50px
+  text-align: center
+
+.image
+  border-radius: 4px
+  overflow: hidden
+  position: relative
+  margin-bottom: 25px
+
+  img
+    display: block
+
+.desc
+  position: absolute
+  background: rgba(black, .5)
+  padding: 15px 12px
+  color: white
+  font-size: .9em
+  font-weight: 300
+  width: 100%
+  top: 100%
+  anim()
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: .7em
+
+.name
+  text-align: center
+  line-height: 1.2
+  font-weight: 300
+  anim()
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: .8em
+
+.item
+  max-width: 165px
+  margin: 0 auto
+  display: block
+  margin-bottom: 30px
+  &:hover
+    text-decoration: none
+    .name
+      color scarlet-three
+
+    .desc
+      transform: translateY(-100%)

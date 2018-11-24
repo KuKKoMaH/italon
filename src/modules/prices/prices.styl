@@ -1,0 +1,72 @@
+.container
+  position: relative
+  color: white
+  padding: 50px 0 220px
+
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    z-index: -1
+    width: 50%
+    height: 100%
+    top: 0
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: none
+
+  &:before
+    background-color scarlet
+    left: 0
+
+  &:after
+    background-color greyish-brown
+    right: 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 0
+
+@media (max-width: $breakpoint-md - 1)
+  .left
+    text-align: center
+
+  .right
+    text-align: center
+
+@media (max-width: $breakpoint-sm - 1)
+  .left
+    background-color scarlet
+
+  .right
+    background-color greyish-brown
+
+.content
+  padding-left: 100px
+  text-align: left
+
+  @media (max-width: $breakpoint-md - 1)
+    padding-left: 0
+    display: inline-block
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding 20px 0
+
+.x2
+  vc()
+  background: url(sprites/sprite-car-x2.svg)
+
+.x1
+  vc()
+  background: url(sprites/sprite-car-x1.svg)
+
+.price
+  vc()
+  font-size: 1.5em
+  margin-left: 8px
+
+.number
+  font-size: 1.5em
+
+.text
+  margin-top: 20px
+  font-weight: 300
