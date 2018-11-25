@@ -1,20 +1,38 @@
-require('jquery-smooth-scroll');
-var styles = require('../../js/styles');
-var menu = $('.' + styles.header['menu-wrapper']);
+const $menu = $('.header__mobile-menu');
 
-var activeClass = styles.header['menu-wrapper-active'];
+const $menuBtn = $('.header__menu-btn');
+const $closeBtn = $('.header__menu-close');
 
-$('.' + styles.header.hamburger + ', .' + styles.header.close).on('click', function(e){
-  e.preventDefault();
-  menu.toggleClass(activeClass);
+$menuBtn.on('click', () => {
+  $menu.addClass('header__mobile-menu--active');
+  $menuBtn.hide();
+  $closeBtn.show();
 });
 
-$('.' + styles.header.header + ' a').smoothScroll({
-  // offset: -60,
-  beforeScroll: function() {
-    menu.removeClass(activeClass);
-  },
-  afterScroll: function(options) {
-    window.location.hash = options.scrollTarget;
+$closeBtn.on('click', () => {
+  $menu.removeClass('header__mobile-menu--active');
+  $menuBtn.show();
+  $closeBtn.hide();
+});
+
+$('.header__menu > ul > li > a:not(:last-child)').on('click', (e) => {
+  const $el = $(e.delegateTarget).parent();
+  $el.toggleClass('header__active');
+  return false;
+});
+
+const $window = $(window);
+let fixed = false;
+const onScroll = () => {
+  const scrollTop = $window.scrollTop();
+  const offset = 1;
+  if (scrollTop > offset && !fixed) {
+    $('header').addClass('header--fixed');
+    fixed = true;
+  } else if (scrollTop < offset && fixed) {
+    $('header').removeClass('header--fixed');
+    fixed = false;
   }
-});
+};
+$window.on('scroll', onScroll);
+onScroll();

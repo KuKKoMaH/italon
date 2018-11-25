@@ -1,59 +1,141 @@
-.container
-  background-color greyish-brown
-  padding: 40px 0 30px
-  color: white
-
-.left
-  padding-left: 98px
-
-  @media (max-width: $breakpoint-md - 1)
-    padding-left: 0
-
-.logo
-  background: url(sprites/sprite-logo.svg)
-  margin-bottom: 5px
-
-.socials
-  margin-top: 10px
-
+.footer
+  background: #000000
+  color: #fff
+  padding: 100px 0 60px
+  overflow: hidden
   @media (max-width: $breakpoint-sm - 1)
-    margin-bottom: 20px
+    padding: 50px 0 24px
+  &__menu
+    margin-bottom: 75px
+    justify-content: space-between
+    position: relative
+    @media (max-width: $breakpoint-sm - 1)
+      display: none
 
-.icon
-  vc()
-  margin-right: 10px
-  margin-top: 10px
-  anim()
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      height: 3px
+      width: 100%
+      background: #ffffff
+      right: 100%
+      top: 6px
+      margin-right: 30px
 
-  &:hover
-    opacity: .7
+    ul
+      padding: 0
+      margin: 0
+    li
+      list-style: none
+    a
+      &:hover
+        text-decoration: underline
+    > ul
+      flex: 1
+      display: contents
 
-.vk
-  background: url(modules/footer/sprite-vk.png)
-.instagram
-  background: url(modules/footer/sprite-instagram.png)
-.autoru
-  background: url(modules/footer/sprite-autoru.png)
-.drive
-  background: url(modules/footer/sprite-drive.png)
+      > li
+        > a
+          font-size: 20px
+          font-weight: 900
+          text-transform: uppercase
+        > ul
+          margin-top: 30px
 
-.text
-  opacity: .5
-  font-size: .9em
-  font-weight: 300
-  @media (max-width: $breakpoint-md - 1)
-    font-size: .8em
+          > li
+            font-size: 14px
+            margin-bottom: 20px
 
-.phone
-  font-size: 2em
-  margin: 8px 0
+  &__contacts
+    &-title
+      font-size: 20px
+      font-weight: 900
+      text-transform: uppercase
+      margin-bottom: 30px
+    &-address
+      font-size: 14px
+      margin-bottom: 20px
+    &-phone
+      font-size: 14px
+      font-weight: 500
 
-  @media (max-width: $breakpoint-md - 1)
-    font-size: 1.3em
+  &__content
+    justify-content: space-between
+    align-items: center
+    position: relative
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction: column-reverse
 
-.policy
-  display: inline-block
-  margin-top: 1em
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      height: 3px
+      width: 100%
+      background: #ffffff
+      left: 100%
+      bottom: 32px
+      margin-left: 30px
 
-  &:hover
-    text-decoration: none
+  &__logo
+    display: block
+    @media (max-width: $breakpoint-sm - 1)
+      display: none
+    &--small
+      display: none
+      @media (max-width: $breakpoint-sm - 1)
+        display: block
+        margin-top: 49px
+
+  &__info
+    display: flex
+    flex-direction: row
+    align-items: center
+    @media (max-width: $breakpoint-sm - 1)
+      display: contents
+      text-align: center
+
+  &__copyright
+    font-size: 11px
+    line-height: 2
+    margin-left: 45px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 32px 0 0
+
+  &__socials
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 42px
+
+  &__social
+    display: block
+    margin: 0 15px
+
+    &--vk
+      background: url(../../images/sprite-vk.svg)
+    &--fb
+      background: url(../../images/sprite-fb.svg)
+    &--inst
+      background: url(../../images/sprite-inst.svg)
+
+  &__callback
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
+    border: 0
+    background-color: transparent
+    padding: 0
+    margin: 0
+    cursor: pointer
+
+
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      background: url(sprite-call.svg)
+      margin-right: 30px

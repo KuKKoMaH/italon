@@ -1,20 +1,45 @@
-.footer-container
-  .w
-    .c.c4
-      .footer-left
-        .footer-logo
-        .footer-text Кузовные пороги для всех моделей автомобилей
+footer.footer
+  .w.footer__menu
+      ul
+        li
+          a(href='#') Информация
+          ul
+            li: a(href='#') О компании
+            li: a(href='#') Где купить
+            li: a(href='#') Акции
+            li: a(href='#') Контакты
+        li
+          a(href='#') каталог
+          ul
+            li: a(href='#') Керамогранит напольная
+            li: a(href='#') Керамогранит настенная
+            li: a(href='#') Настенная плитка
+            li: a(href='#') Керамогранит Coliseum
+        li
+          a(href='#') Проекты
+          ul
+            li: a(href='#') Реализованные проекты
+            li: a(href='#') Для дизайнеров
+            li: a(href='#') Обратная связь
+        li
+          a(href='#') Клиентам
+          ul
+            li: a(href='#') Документы
+            li: a(href='#') Клиентам
+            li: a(href='#') Обратная связь
 
-    .c.c4
-      .footer-invite Вступайте в наши сообщества:
-      .footer-socials
-        a(href='#').footer-icon.footer-vk
-        a(href='#').footer-icon.footer-instagram
-        a(href='#').footer-icon.footer-autoru
-        a(href='#').footer-icon.footer-drive
-      a.footer-policy.footer-text.popup-opener(href='#policy') Политика конфиденциальности
+      .footer__contacts
+        .footer__contacts-title контакты
+        .footer__contacts-address г. Пенза, ул. Измайлова, 54
+        .footer__contacts-phone +7 (8412) 45–43–23
+  .w.footer__content
+    .footer__info
+      img.footer__logo(src='/modules/footer/italon.png' srcset="/modules/footer/italon@2x.png 2x")
+      .footer__copyright Использование материалов сайта#[br]без согласования запрещено!#[br]Copyright © 2018
+    .footer__socials
+      a(href='#').footer__social.footer__social--vk
+      a(href='#').footer__social.footer__social--fb
+      a(href='#').footer__social.footer__social--inst
+    img.footer__logo.footer__logo--small(src='/modules/footer/italon.png' srcset="/modules/footer/italon@2x.png 2x")
+    button.footer__callback.popup__opener(href='#callback') заказать звонок
 
-    .c.c4
-      .footer-text Бесплатно со всех номеров РФ
-      .footer-phone 8(800)777-00-55
-      .footer-text Прием заказов с 9 до 21

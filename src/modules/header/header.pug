@@ -1,20 +1,29 @@
-- var items = [];
-- items.push({href:'#form', title: 'Выбор порогов'})
-- items.push({href:'#prices', title: 'Стоимость'})
-- items.push({href:'#process', title: 'Пример монтажа'})
-- items.push({href:'#testimonials', title: 'Отзывы'})
-- items.push({href:'#faq', title: 'Вопросы-ответы'})
-
-.header-header
-  .w.fh
-    .c.c9.header-menu-wrapper
-      a.header-logo(href='#top')
-      nav.header-menu
-        each item in items
-          .header-menu-item.vc
-            a.header-menu-item-inner(href=item.href)=item.title
-      a.header-close(href='#'): .header-close-icon
-    .c.c3.fh
-      a.header-hamburger(href='#')
-      .header-phone
-        .header-phone-number 8 800 777-00-55
+header.header#header
+  .w.w-c
+    .header__mobile-btn
+      button.header__menu-btn
+      button.header__menu-close
+    img.header__logo(src='/modules/header/italon.png' srcset="/modules/header/italon@2x.png 2x")
+    .header__mobile-menu
+      .header__menu
+        ul
+          li: a(href='#') О компании
+          li
+            a(href='#') каталог
+            ul
+              li: a(href='#') Керамогранит напольная
+              li: a(href='#') Керамогранит настенная
+              li: a(href='#') Настенная плитка
+              li: a(href='#') Керамогранит Coliseum
+          li: a(href='#') проекты
+          li: a(href='#') клиентам
+          li: a(href='#') контакты
+      .header__contacts
+        .header__phone 8 800 555-35-35
+        button.header__order-btn.popup__opener(href='#callback'): span заказать обратный звонок
+      .header__socials
+        a(href='#').header__social.header__social--vk
+        a(href='#').header__social.header__social--fb
+        a(href='#').header__social.header__social--inst
+    a(href='#').header__cart
+      .header__counter 2

@@ -1,125 +1,371 @@
-$height = 60px
 .header
-  position fixed
-  height $height
-  width: 100%
-  background-color greyish-brown
-  color: white
-  z-index: 100
-
-.menu-wrapper
-  @media (max-width: $breakpoint-sm - 1)
-    display: none
-    position: fixed
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: rgba(black, .8)
-    z-index: 1000
-
-  &.menu-wrapper-active
-    display: inline-block
-
-.row
-  height: 100%
-
-  &:before
-    content: ''
-    vc()
-    height: 100%
-
-.logo
-  float: left
-  display: block
-  background: url(sprites/sprite-logo.svg)
-  margin-top: 10px
-
-  @media (max-width: $breakpoint-sm - 1)
-    float: none
-    margin: 10px auto 20px
-
-.menu
-  margin: 0 0 0 140px
-  padding: 0
-  text-align: justify
-  &:after
-    content ''
-    display: inline-block
-    visibility: hidden
-    overflow: hidden
-    width: 100%
-
-  @media (max-width: $breakpoint-sm - 1)
-    margin: 0
-
-.menu-item
-  font-size: .8em
-  line-height: $height
-
-  @media (max-width: $breakpoint-md) and (min-width: $breakpoint-sm)
-    font-size: .6em
-
-  @media (max-width: $breakpoint-sm - 1)
-    display: block
-    font-size: 1.5em
-    text-align: center
-
-.menu-item-inner
-  display: inline-block
-  border-bottom: 3px solid transparent
-  text-decoration: none
-  anim()
-  &:hover, .active
-    border-bottom: 3px solid brick
-
-.phone
-  background-color greyish-brown-two
-  height: $height
-  font-weight: 600
-  font-size: 1.1em
-  text-align: center
-
-  &:after
-    content: ''
-    vc()
-    height: 100%
-
-  &:before
-    content: ''
-    vc()
-    background-image: url(sprites/sprite-phone.svg)
-    margin-right: 14px
-
-  @media (max-width: $breakpoint-md - 1)
-    font-size: .8em
-
-  @media (max-width: $breakpoint-sm - 1)
-    width: 200px
-    float: right
-
-.phone-number
-  vc()
-
-.hamburger
-  display: none
-  float: left
-  background: url(sprites/sprite-hamburger.svg)
-  margin-top: 15px
-
-  @media (max-width: $breakpoint-sm - 1)
-    vc()
-
-.close
-  display: none
   position: absolute
-  right: 10px
-  top: 10px
-  padding: 15px
-  z-index: 1
+  height: 115px
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 3
+  anim()
 
   @media (max-width: $breakpoint-sm - 1)
-    display: block
+    height: 66px //  padding-top: 8px
+  //  padding-bottom: 8px
 
-.close-icon
-  background: url(sprites/sprite-close-menu.svg)
+  &--fixed
+    position: fixed
+    background: #f0f0f0
+
+  .w
+    height: 100%
+    justify-content: space-between
+    display: flex
+    align-items: center
+    flex-direction: row
+
+  &__logo
+    @media (max-width: $breakpoint-md - 1)
+      width: 188px
+
+  &__menu
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media (max-width: $breakpoint-sm - 1)
+      flex: 0 0 auto
+
+    > ul
+      display: flex
+      flex-direction: row
+      list-style: none
+      margin: 0
+      padding: 0
+
+      @media (max-width: $breakpoint-lg - 1)
+        justify-content: space-around
+        flex: 1
+
+      @media (max-width: $breakpoint-sm - 1)
+        flex-direction: column
+
+      > li
+        position: relative
+        margin: 0 28px
+
+        @media (max-width: $breakpoint-lg - 1)
+          margin: 0
+
+        @media (max-width: $breakpoint-sm - 1)
+          margin-bottom: 30px
+
+        > a
+          //position: relative
+          display: block
+          font-size: 12px
+          font-weight: bold
+          text-transform: uppercase
+          anim()
+
+          @media (max-width: $breakpoint-sm - 1)
+            color: #ffffff
+
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            left: -28px
+            right: -28px
+            top: 0
+            bottom: -60px
+            pointer-events: none
+            @media (max-width: $breakpoint-sm - 1)
+              display: none
+
+          &:after
+            content: ''
+            display: block
+            position: absolute
+            bottom: -16px
+            left: -28px
+            right: -28px
+            height: 3px
+            background: #000000
+            opacity: 0
+            pointer-events: none
+            anim()
+            @media (max-width: $breakpoint-sm - 1)
+              display: none
+              transition: none
+
+          &:hover
+            &:before
+              pointer-events: all
+            &:after
+              opacity: 1
+
+            ~ ul
+              opacity: 1
+              pointer-events: all
+
+          @media (max-width: $breakpoint-sm - 1)
+            &:not(:last-child):after
+              content: ''
+              display: inline-block
+              vertical-align: middle
+              position: static
+              background: url(sprite-botton-white.svg)
+              opacity: 1
+              pointer-events: all
+              margin-left: 12px
+
+        > ul
+          opacity: 0
+          pointer-events: none
+          position: absolute
+          width: 290px
+          left: 50%
+          top: 55px
+          background: #000000
+          list-style: none
+          margin: 0
+          margin-left: -145px
+          padding: 42px 42px 30px
+          anim()
+
+          @media (max-width: $breakpoint-sm - 1)
+            position: static
+            opacity: 1
+            pointer-events: all
+            margin: 0
+            padding: 0
+            width: auto
+            max-height: 0
+            overflow: hidden
+            anim()
+
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            top: -12px
+            margin-left: -18px
+            left: 50%
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 18px 12px 18px
+            border-color: transparent transparent #000 transparent
+            @media (max-width: $breakpoint-sm - 1)
+              display: none
+
+          &:hover
+            opacity: 1
+            pointer-events: all
+
+          li
+            margin-bottom: 12px
+            @media (max-width: $breakpoint-sm - 1)
+              margin-top: 22px
+              margin-bottom: 0
+
+          a
+            font-size: 14px
+            color: #ffffff
+
+            &:after
+              content: ''
+              display: inline-block
+              vertical-align: middle
+              background: url(sprite-right.svg)
+              margin-left: 12px
+              opacity: 0
+              anim()
+              @media (max-width: $breakpoint-sm - 1)
+                display: none
+
+            &:hover:after
+              opacity: 1
+
+  @media (max-width: $breakpoint-sm - 1)
+    & ul > li&__active
+      > a:after
+        background:url(sprite-line.svg)
+      > ul
+        padding: 8px 0
+        max-height: 300px
+
+  &__contacts
+    position: relative
+    background: #ffffff
+    height: 47px
+    width: 235px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 47px
+
+    &:before
+      content: ''
+      display: block
+      margin-right: 16px
+      background: url(sprite-phone.svg)
+
+    &:after
+      content: ''
+      display: block
+      margin-left: 12px
+      background: url(sprite-bottom.svg)
+
+      @media (max-width: $breakpoint-sm - 1)
+        display: none
+
+    &:hover
+      .header__order-btn
+        opacity: 1
+        pointer-events: all
+
+  &__phone
+    font-size: 17px
+    height: 13px
+    line-height: 1
+    font-weight: 900
+  //width: 100%
+  //height: 100%
+
+  &__order-btn
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 100%
+    border: 0
+    border-top: 1px solid #f0f0f0
+    background: #ffffff
+    font-size: 11px
+    font-weight: 900
+    text-transform: uppercase
+    opacity: 0
+    pointer-events: none
+    cursor: pointer
+    anim()
+
+    @media (max-width: $breakpoint-sm - 1)
+      //position: static
+      opacity: 1
+      pointer-events: all
+
+  &__cart
+    background: #000000
+    width: 56px
+    height: 47px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    margin-left: 9px
+
+    &:after
+      content: ''
+      display: block
+      background: url(sprite-cart.svg)
+
+    @media (max-width: $breakpoint-sm - 1)
+      background: transparent
+      &:after
+        content: ''
+        display: block
+        background: url(sprite-cart-black.svg)
+
+  &__counter
+    position: absolute
+    background: #ffffff
+    border-radius: 50%
+    left: 3px
+    top: 3px
+    width: 21px
+    height: 21px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 13px
+    font-weight: bold
+
+  &__socials
+    display: none
+    @media (max-width: $breakpoint-sm - 1)
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      padding-top: 50px
+
+  &__social
+    display: block
+    margin: 0 15px
+
+    &--vk
+      background: url(../../images/sprite-vk.svg)
+    &--fb
+      background: url(../../images/sprite-fb.svg)
+    &--inst
+      background: url(../../images/sprite-inst.svg)
+
+
+  &__menu-btn
+    display: none
+    margin: 0
+    padding: 0
+    border: 0
+    background-color: transparent
+    background: url(sprite-menu.svg)
+    cursor: pointer
+    outline: 0
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: block
+
+  &__menu-close
+    display: none
+    padding: 0
+    margin: 0
+    border: 0
+    background-color: transparent
+    background: url(sprite-menu-close.svg);
+    cursor: pointer
+    outline: 0
+
+  //@media (max-width: $breakpoint-sm - 1)
+  //  display: block
+
+  &__mobile-btn
+    width: 35px
+    display: none
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: block
+
+  &__mobile-menu
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: space-around
+    flex-wrap: wrap
+
+    @media (max-width: $breakpoint-sm - 1)
+      position: fixed
+      display: block
+      overflow: auto
+      padding: 40px 31px
+      top: 66px
+      bottom: 0
+      left: 0
+      width: 300px
+      background: #000000
+      transform: translate3d(-300px, 0, 0)
+      anim()
+
+      &--active
+        transform: translate3d(0, 0, 0)
