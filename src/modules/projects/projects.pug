@@ -1,0 +1,28 @@
+.projects
+  .c
+    .projects__search
+      .projects__search-header ПОИСК РЕАЛИЗОВАННЫХ ПРОЕКТОВ
+      form.projects__search-container
+        select.projects__select
+          option(value='') По коллекции, использованной в проекте
+          option(value='1') Коллекция 1
+          option(value='2') Коллекция 2
+          option(value='3') Коллекция 3
+          option(value='11') Коллекция 1
+          option(value='12') Коллекция 2
+          option(value='13') Коллекция 3
+          option(value='21') Коллекция 1
+          option(value='22') Коллекция 2
+          option(value='23') Коллекция 3
+        select.projects__select
+          option(value='') По региону
+          option(value='1') Регион 1
+          option(value='2') Регион 2
+          option(value='3') Регион 3
+        button.projects__button ПОИСК
+    .projects__items
+      each val in [1, 2, 3, 4, 5, 6 ]
+        .projects__item
+          a.projects__content(style='background-image: url(https://source.unsplash.com/random/433x433?' + val + ');' href='#')
+            .projects__name ОБЩЕСТВЕННЫЕ МЕСТА
+            .projects__name--hover ОБЩЕСТВЕННЫЕ МЕСТА

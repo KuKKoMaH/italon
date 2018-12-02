@@ -1,0 +1,1 @@
+$('.projects__select').selectize({});

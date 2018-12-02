@@ -1,0 +1,11 @@
+extends pug/_layout
+
+block body
+  include modules/header/header
+  .head
+    .w.head__container
+      .head__title РЕАЛИЗОВАННЫЕ ПРОЕКТЫ
+      .head__breadcrumbs
+        a.head__breadcrumb(href='#') ГЛАВНАЯ
+        a.head__breadcrumb(href='#') РЕАЛИЗОВАННЫЕ ПРОЕКТЫ
+  include modules/projects/projects

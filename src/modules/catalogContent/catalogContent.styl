@@ -1,0 +1,76 @@
+.catalogContent
+  &__sub
+    display: flex
+    font-weight: bold
+    font-size: 11px
+    align-items: center
+    margin-bottom: 32px
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+  &__total
+    margin-right: 64px
+
+  &__available
+    input
+      margin-right: 20px
+
+  &__sort
+    margin-left: auto
+    margin-right: 65px
+
+  &__items
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin: -7px
+
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+      padding: 0 6px
+
+  &__item
+    width: 25%
+    @media (max-width: $breakpoint-md - 1)
+      width: auto
+      margin-bottom: 20px
+
+  &__content
+    display: block
+    margin: 7px
+    background: #f6f6f6
+    anim()
+
+    &:hover
+      box-shadow: 0 7px 30px 0 rgba(0,0,0,.5)
+
+  &__image
+    height: 236px
+    background-size: cover
+    background-position: 50% 50%
+    display: block
+
+  &__info
+    padding: 33px 23px 27px
+
+  &__name
+    font-size: 16px
+    font-weight: 900
+
+  &__description
+    font-size: 13px
+    line-height: 1.6
+    font-family: 'Gilroy', sans-serif
+    margin-top: 12px
+
+  &__price
+    font-size: 18px
+    font-weight: 900
+    margin-top: 25px
+
+  &__pagination
+    display: flex
+    justify-content: flex-end
+    margin-top: 31px
+    @media (max-width: $breakpoint-md - 1)
+      justify-content: center

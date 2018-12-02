@@ -1,0 +1,22 @@
+.catalog
+  padding-top: 85px
+  padding-bottom: 175px
+  @media (max-width: $breakpoint-md - 1)
+    padding-top: 0
+    background: #f0f0f0
+    padding-bottom: 75px
+
+  &__container
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+
+  &__sidebar
+    max-width: 205px
+    flex: 1
+    margin-right: 70px
+    @media (max-width: $breakpoint-md - 1)
+      max-width: none
+      margin-right: 0
+
+  &__content
+    flex: 1

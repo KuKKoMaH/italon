@@ -1,0 +1,25 @@
+.catalogContent
+  .catalogContent__sub
+    .catalogContent__total НАЙДЕНО 576 ТОВАРОВ
+    label.catalogContent__available
+      input(type='checkbox')
+      | ТОВАР В НАЛИЧИИ
+    .catalogContent__sort
+      | СОРТИРОВАТЬ:
+      select
+        option ПО ЦЕНЕ
+        option ПО ЦЕНЕ
+        option ПО ЦЕНЕ
+    include ../pagination/pagination
+
+  .catalogContent__items
+    each val in [1, 2, 3, 4, 5, 6, 7, 8 ]
+      .catalogContent__item
+        a.catalogContent__content(href='#')
+          .catalogContent__image(style='background-image: url(https://source.unsplash.com/random/260x236?' + val + ');')
+          .catalogContent__info
+            .catalogContent__name MATERIA
+            .catalogContent__description Керамогранит#[br]напольный
+            .catalogContent__price от 3 530.–
+  .catalogContent__pagination
+    include ../pagination/pagination

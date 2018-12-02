@@ -1,12 +1,19 @@
 import 'jquery';
-import 'owl.carousel';
+// import 'owl.carousel';
 import SmoothScroll from 'smooth-scroll';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
+import 'selectize';
 
 // import './js/$.debounce';
 import './modules/header/header';
 import './modules/frontSlider/frontSlider';
+import './modules/catalogSidebar/catalogSidebar';
+import './modules/projects/projects';
+import './modules/projectSlider/projectSlider';
+import './modules/productSlider/productSlider';
+import './modules/productPrimary/productPrimary';
+import './modules/productCharacteristics/productCharacteristics';
 // import './modules/slide/slide';
 // import './modules/form/form';
 // import './modules/catalog/catalog';

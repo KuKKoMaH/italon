@@ -1,0 +1,12 @@
+extends pug/_layout
+
+block body
+  include modules/header/header
+  .head
+    .w.head__container
+      .head__title НОВЫЙ ТЕРМИНАЛ АЭРОПОРТА В СИМФЕРОПОЛЕ
+      .head__breadcrumbs
+        a.head__breadcrumb(href='#') ГЛАВНАЯ
+        a.head__breadcrumb(href='#') РЕАЛИЗОВАННЫЕ ПРОЕКТЫ
+  include modules/projectSlider/projectSlider
+  include modules/projectInfo/projectInfo

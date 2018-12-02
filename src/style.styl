@@ -2,8 +2,9 @@
  * Theme Name: carbody.pro
  */
 
-@import "owl.carousel/dist/assets/owl.carousel.css";
+//@import "owl.carousel/dist/assets/owl.carousel.css";
 @import "magnific-popup/dist/magnific-popup.css";
+@import "tiny-slider/dist/tiny-slider.css";
 //@import "baron/baron.css";
 //@import "bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css";
 //@import "suggestions-jquery/dist/css/suggestions.css";
@@ -39,9 +40,9 @@ body
 *, *:before, *:after
   box-sizing: border-box
 
-img
-  max-width: 100%
-  height: auto
+//img
+//  max-width: 100%
+//  height: auto
 
 a
   color: inherit
@@ -113,12 +114,30 @@ button
   &--front
     background: #f0f0f0
     padding-top: 115px
-    @media (max-width: $breakpoint-sm - 1)
+    @media (max-width: $breakpoint-md - 1)
+      padding-top: 66px
+  &--product
+    padding-top: 115px
+    @media (max-width: $breakpoint-md - 1)
       padding-top: 66px
 
 
 @import "modules/header/header.styl"
 @import "modules/frontSlider/frontSlider.styl"
+@import "modules/frontCards/frontCards.styl"
+@import "modules/head/head.styl"
+@import "modules/catalog/catalog.styl"
+@import "modules/catalogSidebar/catalogSidebar.styl"
+@import "modules/catalogContent/catalogContent.styl"
+@import "modules/pagination/pagination.styl"
+@import "modules/projects/projects.styl"
+@import "modules/projectSlider/projectSlider.styl"
+@import "modules/projectInfo/projectInfo.styl"
+@import "modules/productSlider/productSlider.styl"
+@import "modules/productPrimary/productPrimary.styl"
+@import "modules/productInfo/productInfo.styl"
+@import "modules/productCharacteristics/productCharacteristics.styl"
+@import "modules/productAnalogue/productAnalogue.styl"
 //@import "modules/slide/slide.styl"
 //@import "modules/form/form.styl"
 //@import "modules/catalog/catalog.styl"

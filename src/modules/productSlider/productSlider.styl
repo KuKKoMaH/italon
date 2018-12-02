@@ -1,0 +1,158 @@
+.productSlider
+  flex: 1
+  display: flex
+  @media (max-width: $breakpoint-md - 1)
+    flex-direction: column
+    //margin: 0 -10px
+    padding-bottom: 30px
+
+  &__main
+    flex: 1
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -8px
+
+    &-slide
+      height: 500px
+      background-size: cover
+      background-position: 50% 50%
+      @media (max-width: $breakpoint-md - 1)
+        height: 300px
+
+  &__thumbs
+    position: relative
+    display: flex
+    align-items: center
+    margin-left: 23px
+    overflow: hidden
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -8px
+
+    &-slide
+      padding: 3px
+      border: 3px solid transparent
+      anim()
+
+      &--active
+        border: 3px solid #000
+
+      img
+        display: block
+
+  &__arrow
+    border: 0
+    cursor: pointer
+    outline: 0
+    position: absolute
+    left: 50%
+    margin-left: -7px
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+    &--prev
+      top: 0
+      margin-top: 12px
+      background: url(sprite-up.svg)
+    &--next
+      bottom: 0
+      margin-bottom: 12px
+      background: url(sprite-down.svg)
+
+
+//$height = 700px
+//.projectSlider
+//  margin-top: 75px
+//  display: flex
+//  @media (max-width: $breakpoint-md - 1)
+//    flex-direction: column-reverse
+//    margin: 0 -10px
+//    padding-bottom: 40px
+//    background: #f0f0f0
+//
+//  &__main
+//    flex: 1
+//    &-slide
+//      height: $height
+//      background-size: cover
+//      background-position: 50% 50%
+//      @media (max-width: $breakpoint-md - 1)
+//        height: 300px
+//
+//  &__image
+//    display: block
+//    width: 100%
+//    height: auto
+//
+//  &__thumbs
+//    min-width: 204px
+//    align-self: stretch
+//    //position: relative
+//    overflow: hidden
+//    display: flex
+//    justify-content: flex-end
+//    padding-right: 14px
+//    @media (max-width: $breakpoint-md - 1)
+//      padding-right: 0
+//      display: block
+//      margin-top: 6px
+//
+//    img
+//      display: block
+//      @media (max-width: $breakpoint-md - 1)
+//        height: 66px
+//        width: auto
+//
+//  &__nav
+//    //min-width: 204px
+//    display: flex
+//    flex-direction: column
+//    justify-content: center
+//    padding-left: 40px
+//    @media (max-width: $breakpoint-md - 1)
+//      display: none
+//
+//
+//
+//    &:after
+//      content: ''
+//      display: block
+//
+//    &--prev
+//      &:after
+//        background: url(../../images/sprite-left.svg)
+//
+//    &--next
+//      &:after
+//        background: url(../../images/sprite-right.svg)
+//
+//  &__dots
+//    display: flex
+//    align-items: center
+//    justify-content: center
+//    height: 128px
+//    margin-bottom: 23px
+//    @media (max-width: $breakpoint-md - 1)
+//      display: none
+//
+//  &__dot
+//    margin: 0 13px
+//    width: 14px
+//    height: 14px
+//    display: flex
+//    align-items: center
+//    justify-content: center
+//    cursor: pointer
+//    border: 0
+//    background-color: transparent
+//    padding: 0
+//    outline: 0
+//
+//    &:after
+//      content: ''
+//      display: block
+//      width: 0
+//      height: 0
+//      border: 3px solid #000
+//      anim(.3s)
+//
+//    &.tns-nav-active:after
+//      width: 14px
+//      height: 14px

@@ -1,5 +1,5 @@
 .frontSlider
-  height: calc(100vh - 115px)
+  height: calc(95vh - 115px)
   position: relative
   @media (max-width: $breakpoint-sm - 1)
     height: auto
@@ -38,7 +38,7 @@
     align-items: flex-start
     justify-content: center
     padding: 0 12px
-    anim()
+    anim(.3s)
 
     @media (max-width: $breakpoint-sm - 1)
       padding: 38px 12px 33px
@@ -116,7 +116,7 @@
     background-size: cover
     background-position: 50% 50%
     opacity: 0
-    anim()
+    anim(.3s)
 
     &--active
       opacity: 1
@@ -147,7 +147,7 @@
   &__prev
     right: 60%
     &:after
-      background: url(sprite-left.svg)
+      background: url(../../images/sprite-left.svg)
     @media (max-width: $breakpoint-sm - 1)
       right: 16px
       top: 295px
@@ -155,7 +155,7 @@
   &__next
     left: 40%
     &:after
-      background: url(sprite-right.svg)
+      background: url(../../images/sprite-right.svg)
     @media (max-width: $breakpoint-sm - 1)
       left: auto
       right: 16px
@@ -167,8 +167,8 @@
     align-items: center
     justify-content: center
     height: 100px
-    @media (max-width: $breakpoint-sm - 1)
-      height: 40px
+    //@media (max-width: $breakpoint-sm - 1)
+    //  height: 40px
 
   &__dot
     margin: 0 16px
@@ -189,7 +189,7 @@
       width: 0
       height: 0
       border: 3px solid #000
-      anim()
+      anim(.3s)
 
     &--active:after
       width: 14px

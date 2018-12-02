@@ -1,0 +1,77 @@
+.projectInfo
+  align-items: flex-start
+  justify-content: center
+  padding-bottom: 90px
+  @media (max-width: $breakpoint-md - 1)
+    background: #f0f0f0
+    padding-bottom: 60px
+
+
+  &__info
+    font-size: 11px
+    margin-right: 120px
+    @media (max-width: $breakpoint-md - 1)
+      margin-right: 0
+      margin: 0 8px
+
+    td
+      font-weight: 500
+      padding-bottom: 25px
+
+      &:first-child
+        font-weight: 900
+        padding-right: 60px
+
+  &__rest
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column-reverse
+
+  &__share
+    background: #000000
+    align-self: center
+    padding: 30px 42px 35px
+
+    &-title
+      color: #ffffff
+      font-size: 16px
+      font-weight: 900
+      margin-bottom: 24px
+      text-align: center
+
+    &-icons
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      @media (max-width: $breakpoint-sm - 1)
+        margin-top: 42px
+
+    &-icon
+      display: block
+      margin: 0 15px
+
+      &--vk
+        background: url(../../images/sprite-vk.svg)
+      &--fb
+        background: url(../../images/sprite-fb.svg)
+      &--tw
+        background: url(../../images/sprite-tw.svg)
+
+  &__text
+    max-width: 300px
+    font-size: 13px
+    line-height: 1.65
+    font-family: 'Gilroy', sans-serif
+    margin-left: 70px
+
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 0
+      max-width: none
+      padding: 0 8px
+      margin-bottom: 50px
+
+    p
+      margin: 0 0 12px
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="карточка-товара-copy" transform="translate(-1168.000000, -874.000000)" fill="#000000">
+            <g id="Group-5" transform="translate(1168.000000, 874.000000)">
+                <path d="M0,0 L16,0 L16,16 L0,16 L0,0 Z M13.6,8.91321894 L13.6,2.4 L2.4,2.4 L2.4,12.8 L10,5.41511599 L13.6,8.91321894 Z M13.6,12.4742942 L10.1313508,8.8 L5.6,13.6 L13.6,13.6 L13.6,12.4742942 Z M4,5.6 C4,4.7163448 4.7163448,4 5.6,4 C6.4836552,4 7.2,4.7163448 7.2,5.6 C7.2,6.4836552 6.4836552,7.2 5.6,7.2 C4.7163448,7.2 4,6.4836552 4,5.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

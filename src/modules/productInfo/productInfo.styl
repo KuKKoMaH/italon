@@ -1,0 +1,63 @@
+.productInfo
+  align-items: center
+  margin-top: 80px
+  margin-bottom: 90px
+  @media (max-width: $breakpoint-md - 1)
+    margin-top: 0
+    margin-bottom: 38px
+
+  &__text
+    flex: 1
+    line-height: 1.65
+    margin-right: 130px
+    margin-left: 35px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0
+
+    h1,h2,h3,h4,h5,h6
+      font-size: 19px
+      font-weight: 900
+      margin: 0 0 21px
+
+    p
+      font-size: 13px
+      margin: 0 0 8px
+
+  &__links
+    flex: 1
+    background: #f6f6f6
+    display: flex
+    justify-content: space-between
+    padding: 37px 42px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 0
+      background-color: transparent
+      flex-direction: column
+      align-items: stretch
+      align-self: stretch
+
+  &__link
+    font-size: 11px
+    line-height: 10px
+    font-weight: bold
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-md - 1)
+      background: #f6f6f6
+      padding: 29px 32px 21px
+      margin-top: 10px
+
+    &:hover
+      text-decoration: underline
+
+    &:before
+      content: ''
+      display: block
+      margin-right: 14px
+
+    &--solutions:before
+      background: url(sprite-solutions.svg)
+    &--catalog:before
+      background: url(sprite-catalog.svg)
+    &--video:before
+      background: url(sprite-video.svg)

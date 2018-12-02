@@ -1,0 +1,188 @@
+.frontCards
+  overflow: hidden
+  &__hint
+    text-align: center
+    font-size: 13px
+    font-weight: bold
+    margin-bottom: 70px
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+    &:after
+      content: ''
+      display: block
+      width: 3px
+      height: 74px
+      background: #000000
+      margin: 6px auto 0
+
+  &__row
+    justify-content: space-between
+    align-items: stretch
+    padding-bottom: 139px
+
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+      padding-bottom: 0
+
+    &--last
+      padding-bottom: 30px
+      & ^[0]__card:first-child ^[0]__image:before
+        content: ''
+        position: absolute
+        display: block
+        height: 500px
+        background: #000;
+        top: 100%;
+        left: -5000px
+        width: 10000px
+        z-index: -1
+
+      @media (max-width: $breakpoint-md - 1)
+        padding-bottom: 0
+        margin-bottom: -50px
+
+        & ^[0]__card:first-child ^[0]__image:before
+          display: none
+
+        & ^[0]__card:last-child ^[0]__image:before
+            content: ''
+            position: absolute
+            display: block
+            height: 500px
+            background: #000;
+            top: 100%;
+            left: -5000px
+            width: 10000px
+            z-index: -1
+
+  &__card
+    //max-width: 371px
+    max-width: 29%
+    background: #ffffff
+    position: relative
+    z-index: 1
+    flex: 1
+
+    @media (max-width: $breakpoint-md - 1)
+      max-width: none
+      width: 100%
+      margin-bottom: 24px
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: -1
+      background: url(sprite-bg.svg)
+      pointer-events: none
+      anim(.15s)
+      transform: translate(-50%, -50%) rotate(-30deg) scale(.6)
+
+    &:hover
+      &:before
+        transform: translate(-50%, -50%)
+
+    &--big
+      max-width: 49%
+      @media (max-width: $breakpoint-md - 1)
+        max-width: none
+        width: 100%
+
+      & ^[0]__content
+        padding: 45px 57px
+        @media (max-width: $breakpoint-md - 1)
+          padding 45px 20px
+      & ^[0]__title
+        font-size: 26px
+      & ^[0]__text
+        margin-top: 23px
+
+      &:before
+        display: none
+
+
+  &__image
+    position: relative
+    z-index: 2
+    background: #000000
+    img
+      display: block
+      width: 100%
+      height: auto
+
+  &__label
+    position: absolute
+    font-size: 14px
+    font-weight: bold
+    color: #ffffff
+    top: 39px
+    left: 32px
+
+  &__special
+    position: absolute
+    background: #000000
+    top: 22px
+    right: 26px
+    width: 56px
+    height: 56px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    font-size: 18px
+    line-height: 1
+    font-weight: 900
+    color: #ffffff
+
+  &__content
+    padding: 33px 32px
+    position: relative
+    background: #ffffff
+    z-index: 2
+
+  &__subtitle
+    font-size: 13px
+    margin-bottom: 22px
+
+  &__title
+    font-size: 23px
+    font-weight: 900
+    &--small
+      font-size: 15px
+
+  &__price
+    font-size: 24px
+    font-weight: 900
+    margin-top: 10px
+
+  &__text
+    font-size: 13px
+    line-height: 1.6
+    margin-top: 20px
+
+  &__link
+    position: relative
+    font-size: 13px
+    font-weight: bold
+    margin-top: 34px
+    display: inline-block
+
+    &:hover
+      text-decoration: underline
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      pointer-events: none
+      right: 100%
+      top: 3px
+      width: 40px
+      height: 3px
+      background: #000000
+      margin-right: 17px
+      @media (max-width: $breakpoint-md - 1)
+        display: none

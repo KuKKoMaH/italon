@@ -1,0 +1,131 @@
+.productCharacteristics
+  flex: 1
+  margin-right: 100px
+
+  &__title
+    font-size: 19px
+    font-weight: 900
+    margin-bottom: 52px
+
+  &__table
+    border: 1px solid #DDDDDD
+    border-spacing: 0
+    tbody
+      td
+        font-size: 11px
+        font-weight: 500
+        padding: 0 18px
+        padding-top: 16px
+        &:first-child
+          padding-left: 29px
+        &:last-child
+          padding-right: 29px
+
+      tr:first-child
+        td
+          padding-top: 25px
+
+      tr:last-child
+        td
+          padding-bottom: 39px
+
+    thead
+      td
+        border-bottom: 1px solid #DDDDDD
+
+    tfoot
+      td
+        padding: 0
+
+  &__price
+    font-size: 12px
+    font-weight: bold
+    padding: 18px 29px 13px
+
+  &__type
+    font-size: 12px
+
+  &__select
+    &.selectize-control
+      display: inline-block
+      margin-left: 11px
+      border-bottom: 1px dashed #b9b9b9
+
+    .selectize-input
+      padding-right: 15px
+      position: relative
+      font-size: 12px
+      font-weight: bold
+      line-height: 1.2
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        margin-top: -3px
+        right: 2px
+        background: url(../../images/sprite-arrow.svg)
+
+      &.focus:after
+        transform: rotate(180deg)
+
+      .item
+        display: inline-block
+        vertical-align: middle
+
+      > input
+        display: none !important
+
+    .selectize-dropdown
+      position: absolute
+      margin: 1px 0 0
+      max-height: 300px
+      overflow: auto
+      z-index: 1
+      cursor: pointer
+      background: #fff
+      width: auto !important
+
+      .option
+        padding: 5px 3px
+        anim()
+        &:hover
+          background: #f0f0f0
+
+
+  &__center
+    text-align: center
+
+  tr&__head
+    td
+      font-size: 9px
+      font-weight: 900
+      padding-bottom: 8px
+
+  &__more
+    background: #f6f6f6
+    font-size: 11px
+    font-weight: bold
+    padding: 24px 20px 18px
+    position: relative
+    cursor: pointer
+
+    &:after
+      content: ''
+      display: block
+      background: url(../../images/sprite-arrow.svg)
+      position: absolute
+      right: 17px
+      top: 50%
+      margin-top: -4px
+
+  &__content
+    height: 0
+    anim()
+    overflow: hidden
+    &-inner
+      font-size: 12px
+      padding: 29px 29px 21px
+    p
+      margin: 0 0 8px
