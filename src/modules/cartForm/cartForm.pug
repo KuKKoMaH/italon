@@ -1,0 +1,13 @@
+.cartForm
+  .cartForm__title ОФОРМЛЕНИЕ ЗАКАЗА
+  input.cartForm__input(placeholder='Ваше имя')
+  input.cartForm__input(placeholder='Номер телефона' type='tel')
+  select.cartForm__select
+    option(value='') Тип оплаты
+    option(value='nal') Наличные
+    option(value='beznal') Перевод
+  .cartForm__file
+    .cartForm__file-name Прикрепить фаил с реквизитами
+    input.cartForm__file-input(type='file')
+  .cartForm__note Заполняя данную форму вы принимаете условия соглашения об использовании сайта, в том числе в части обработки и использования персональных данных.
+  button.cartForm__button ОТПРАВИТЬ МЕНЕДЖЕРУ

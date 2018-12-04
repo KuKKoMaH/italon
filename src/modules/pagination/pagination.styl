@@ -1,7 +1,20 @@
 .pagination
   display: flex
 
-  &__item
+  *
+    outline 0
+
+  button
+    border: 0
+    background-color: transparent
+    padding: 0
+    margin: 0
+    border-radius: 0
+
+  & &__items
+    display: flex
+
+  & &__item
     font-size: 15px
     font-weight: 900
     width: 22px
@@ -12,14 +25,24 @@
     justify-content: center
     margin: 0 5px
     anim()
+    counter-increment: section
 
-    &--active, &:hover
+    &:after
+      content: counter(section)
+
+    &--active, &:hover, &.tns-nav-active
       background: #000000
       color: #ffffff
 
-  &__prev
+  & &__prev,
+  & &__next
     display: flex
+    anim()
 
+    &[disabled]
+      opacity: 0
+
+  &__prev
     &:before
       content:''
       display: block
@@ -39,8 +62,6 @@
       margin-right: 8px
 
   &__next
-    display: flex
-
     &:after
       content:''
       display: block

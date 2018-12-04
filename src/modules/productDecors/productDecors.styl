@@ -1,0 +1,74 @@
+.productDecors
+  flex: 1
+  margin-top: 110px
+  margin-bottom: 75px
+
+  &__title
+    font-size: 19px
+    font-weight: 900
+    margin-bottom: 50px
+
+  &__item
+    display: block
+    padding: 27px 31px
+    background: #f6f6f6
+
+  &__image
+    height: 140px
+    background-size: cover
+    background-position: 50% 50%
+    margin-bottom: 40px
+
+  &__name
+    font-size: 16px
+    font-weight: 900
+    margin-bottom: 14px
+
+  &__description
+    font-family: 'Gilroy', sans-serif
+    font-size: 13px
+    margin-bottom: 26px
+
+  &__price
+    font-size: 18px
+    font-weight: 900
+
+  &__pagination
+    display: flex
+    margin-top: 35px
+    justify-content: flex-end
+    @media (max-width: $breakpoint-md - 1)
+      justify-content: center
+
+      .pagination__prev,
+      .pagination__next
+        display: none !important
+
+      .pagination__item
+        margin: 0 8px
+        width: 14px
+        height: 14px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        border: 0
+        background-color: transparent
+        padding: 0
+        outline: 0
+
+        &:hover
+          background-color: transparent
+
+        &:after
+          content: ''
+          display: block
+          width: 0
+          height: 0
+          border: 3px solid #000
+          background: #fff
+          anim(.3s)
+
+        &.tns-nav-active:after
+          width: 14px
+          height: 14px

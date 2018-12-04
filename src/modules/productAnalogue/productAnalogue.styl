@@ -1,2 +1,40 @@
 .productAnalogue
   flex: 1
+  @media (max-width: $breakpoint-md - 1)
+    display: none
+
+  &__title
+    font-size: 19px
+    font-weight: 900
+    margin-bottom: 50px
+
+  &__items
+    display: flex
+    justify-content: space-between
+
+  &__item
+    width: 50%
+    max-width: 290px
+    padding: 27px 31px
+    background: #f6f6f6
+
+  &__image
+    height: 140px
+    background-size: cover
+    background-position: 50% 50%
+    margin-bottom: 40px
+
+  &__name
+    font-size: 16px
+    font-weight: 900
+    margin-bottom: 14px
+
+  &__description
+    font-family: 'Gilroy', sans-serif
+    font-size: 13px
+    margin-bottom: 26px
+
+  &__price
+    font-size: 18px
+    font-weight: 900
+

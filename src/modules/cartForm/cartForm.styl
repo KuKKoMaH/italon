@@ -1,0 +1,178 @@
+.cartForm
+  background: #f1f1f1
+  padding: 33px 35px
+  display: flex
+  flex-direction: column
+  @media (max-width: $breakpoint-md - 1)
+    padding: 33px 29px
+
+  &__title
+    font-size: 19px
+    font-weight: 900
+    margin-bottom: 26px
+
+  &__input
+    display: block
+    width: 100%
+    border: 0
+    border-bottom: 1px solid #000
+    background-color: transparent
+    font-family: 'Gilroy', sans-serif
+    font-size: 15px
+    outline: 0
+    margin: 0 0 25px
+    padding: 6px 0
+    anim()
+
+    &:focus
+      background: #000000
+      color: #ffffff
+      padding: 6px 15px
+      &::-webkit-input-placeholder
+        color: #ffffff
+      &::-moz-placeholder
+        color: #ffffff
+      &:-ms-input-placeholder
+        color: #ffffff
+      &:-moz-placeholder
+        color: #ffffff
+
+    &::-webkit-input-placeholder
+      color: #000
+    &::-moz-placeholder
+      color: #000
+    &:-ms-input-placeholder
+      color: #000
+    &:-moz-placeholder
+      color: #000
+
+  &__select
+    select&
+      display: none
+    &.selectize-control
+      margin-bottom: 25px
+
+    .selectize-input
+      position: relative
+      font-weight: bold
+      line-height: 1.2
+      border-bottom: 1px solid #000
+      font-family: 'Gilroy', sans-serif
+      font-size: 15px
+      padding: 6px 15px 6px 0
+      anim()
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        margin-top: -3px
+        right: 2px
+        background: url(../../images/sprite-arrow.svg)
+
+      &.focus
+        background: #000000
+        color: #ffffff
+        padding-left: 15px
+
+        input
+          &::-webkit-input-placeholder
+            color: #ffffff
+          &::-moz-placeholder
+            color: #ffffff
+          &:-ms-input-placeholder
+            color: #ffffff
+          &:-moz-placeholder
+            color: #ffffff
+        &:after
+          transform: rotate(180deg)
+
+      .item
+        display: inline-block
+        vertical-align: middle
+
+      input
+        background-color: transparent
+        border: 0
+        padding: 0
+        margin: 0
+        border-radius: 0
+        font: inherit
+        font-size: 15px
+        color: #fff
+        outline: 0
+
+        &::-webkit-input-placeholder
+          color: #000
+        &::-moz-placeholder
+          color: #000
+        &:-ms-input-placeholder
+          color: #000
+        &:-moz-placeholder
+          color: #000
+
+    .selectize-dropdown
+      position: absolute
+      //margin: 1px 0 0
+      overflow: auto
+      z-index: 1
+      cursor: pointer
+      background: #000
+      color: #ffffff
+
+      .option
+        padding: 5px 3px 5px 15px
+        anim()
+        &:hover
+          background: #333333
+
+
+  &__file
+    position: relative
+    overflow: hidden
+    //height: 40px
+    display: flex
+    align-items: center
+    padding: 12px 0 12px 38px
+    margin-bottom: 12px
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 12px
+      margin-top: -8px
+      background: url(sprite-file.svg)
+
+    &-name
+      font-size: 13px
+      line-height: 1.55
+      font-weight: 900
+      word-break: break-all
+
+    &-input
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 200%
+      height: 200%
+      opacity: 0
+      cursor: pointer
+
+  &__note
+    font-family: 'Gilroy', sans-serif
+    font-size: 10px
+    line-height: 1.55
+    margin-bottom: 40px
+
+  &__button
+    background-color: transparent
+    border: 0
+    border-bottom: 3px solid #000
+    font-size: 13px
+    font-weight: bold
+    padding: 6px 0
+    margin: 0
+    align-self: flex-end

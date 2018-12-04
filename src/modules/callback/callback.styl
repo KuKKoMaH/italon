@@ -1,0 +1,71 @@
+.callback
+  width: 585px
+  margin: 0 auto 190px
+  @media (max-width: $breakpoint-md - 1)
+    width: auto
+    margin: 0 16px 70px
+
+
+  &__title
+    font-size: 19px
+    font-weight: 900
+    margin-bottom: 35px
+
+  &__item
+    display: block
+    width: 100%
+    border: 0
+    border-bottom: 1px solid #000
+    background-color: transparent
+    font-family: 'Gilroy', sans-serif
+    font-size: 15px
+    outline: 0
+    margin: 0 0 25px
+    padding: 6px 0
+    anim()
+
+    &:focus
+      background: #000000
+      color: #ffffff
+      padding: 6px 15px
+      &::-webkit-input-placeholder
+        color: #ffffff
+      &::-moz-placeholder
+        color: #ffffff
+      &:-ms-input-placeholder
+        color: #ffffff
+      &:-moz-placeholder
+        color: #ffffff
+
+    &::-webkit-input-placeholder
+      color: #000
+    &::-moz-placeholder
+      color: #000
+    &:-ms-input-placeholder
+      color: #000
+    &:-moz-placeholder
+      color: #000
+
+  &__bottom
+    display: flex
+    margin-top: 44px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column-reverse
+
+  &__note
+    font-family: 'Gilroy', sans-serif
+    font-size: 10px
+    margin-right: 75px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 40px 0 0
+      text-align: center
+
+  &__button
+    background-color: transparent
+    border: 0
+    border-bottom: 3px solid #000
+    font-size: 13px
+    font-weight: bold
+    padding: 6px 0
+    margin: 0
+    align-self: center

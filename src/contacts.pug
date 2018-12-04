@@ -1,0 +1,14 @@
+extends pug/_layout
+
+block body
+  include modules/header/header
+  include modules/map/map
+  .head.head--transparent
+    .w.head__container
+      .head__title КОНТАКТЫ
+      .head__breadcrumbs
+        a.head__breadcrumb(href='#') ГЛАВНАЯ
+        a.head__breadcrumb(href='#') КОНТАКТЫ
+  include modules/contacts/contacts
+  include modules/callback/callback
+

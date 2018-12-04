@@ -190,6 +190,25 @@
         <button class="footer__callback popup__opener" href="#callback">заказать звонок</button>
       </div>
     </footer>
+    <div class="hidden">
+      <div class="popup" id="callback">
+        <div class="popup__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</div>
+        <form>
+          <input class="popup__item" placeholder="Ваше имя">
+          <input class="popup__item" placeholder="Номер телефона" type="tel">
+          <input class="popup__item" placeholder="Ваш e-mail">
+          <div class="popup__bottom">
+            <div class="popup__note">Заполняя данную форму вы принимаете условия соглашения об использовании сайта, в том числе в части обработки и использования персональных данных.</div>
+            <button class="popup__button">ЗАКАЗАТЬ ЗВОНОК</button>
+          </div>
+          <!--https://yandex.ru/maps/-/CBFKV8a18B-->
+        </form>
+      </div>
+    </div>
   </body>
+  <script>
+    var GOOGLE_MAP_API_KEY = "AIzaSyAKCWqbAVy8AsekfYEuddPMtdb5xMpC9pk";
+    var GOOGLE_MAP_CENTER = [53.189798, 45.039265];
+  </script>
   <script src="js/app.js"></script>
 </html>

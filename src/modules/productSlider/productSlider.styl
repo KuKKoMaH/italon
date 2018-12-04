@@ -1,10 +1,12 @@
 .productSlider
   flex: 1
   display: flex
+  align-self: flex-start
   @media (max-width: $breakpoint-md - 1)
     flex-direction: column
     //margin: 0 -10px
     padding-bottom: 30px
+    align-self: stretch
 
   &__main
     flex: 1
@@ -24,6 +26,7 @@
     align-items: center
     margin-left: 23px
     overflow: hidden
+    max-height: 500px
     @media (max-width: $breakpoint-md - 1)
       margin: 0 -8px
 

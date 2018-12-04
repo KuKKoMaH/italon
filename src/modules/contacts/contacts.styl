@@ -1,0 +1,43 @@
+.contacts
+  position: relative
+  width: 672px
+  margin: 0 auto
+  background: #000000
+  padding: 62px 100px
+  color: #ffffff
+  margin-top: 88px
+  margin-bottom: 140px
+  @media (max-width: $breakpoint-md - 1)
+    width: auto
+    margin: 0 16px 33px
+    padding: 42px 20px
+
+
+  &__title
+    font-size: 18px
+    font-weight: 900
+    margin-bottom: 69px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 36px
+
+  &__item
+    display: flex
+    margin-bottom: 32px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+
+    &:last-child
+      margin-bottom: 0
+
+  &__name
+    font-size: 11px
+    font-weight: bold
+    width: 170px
+    @media (max-width: $breakpoint-md - 1)
+      width: auto
+      font-weight: normal
+      margin-bottom: 15px
+
+  &__value
+    font-size: 11px
+    font-weight: bold

@@ -1,0 +1,263 @@
+.cart
+  padding-top: 115px
+  margin-bottom: 79px
+  @media (max-width: $breakpoint-md - 1)
+    padding-top: 66px
+
+  &__left
+    flex: 1
+
+  &__back
+    font-size: 13px
+    font-weight: bold
+    position: relative
+    display: inline-block
+    margin-bottom: 36px
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 1000px
+      height: 3px
+      background: #000000
+      right: 100%
+      margin-right: 14px
+      top: 3px
+
+  &__title
+    font-size: 36px
+    font-weight: 900
+    margin-bottom: 34px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 24px
+      margin-bottom: 26px
+
+  &__items
+    position: relative
+
+  &__clear
+    position: absolute
+    right: 6px
+    bottom: 100%
+    margin-bottom: 16px
+    font-size: 12px
+    font-weight: bold
+    cursor: pointer
+    @media (max-width: $breakpoint-md - 1)
+      bottom: auto
+      top: 100%
+      margin-top: 10px
+
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: bottom
+      background: url(sprite-trash.svg)
+      margin-right: 14px
+
+  &__item
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid #e7e7e7
+    padding: 30px 5px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+
+  &__product
+    display: flex
+    margin-bottom: 26px
+
+  &__image
+    width: 119px
+    height: 73px
+    background-size: cover
+    background-position: 50% 50%
+
+  &__info
+    margin-left: 39px
+
+  &__name
+    font-size: 16px
+    font-weight: 900
+    margin-bottom: 8px
+
+  &__description
+    font-family: 'Gilroy', sans-serif
+    font-size: 13px
+    line-height: 1.65
+
+  &__param
+    @media (max-width: $breakpoint-md - 1)
+      display: flex
+      justify-content: space-between
+      margin-bottom: 39px
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        height: 0
+        bottom: 1px
+        left: 0
+        right: 0
+        border-bottom: 1px dotted #000
+        z-index: -1
+
+      &--quantity
+        &:after
+          display: none
+
+
+  &__label
+    font-size: 11px
+    font-weight: bold
+    white-space: nowrap
+    align-self: flex-end
+    @media (max-width: $breakpoint-md - 1)
+      background: #ffffff
+      padding-right: 8px
+
+  &__value
+    font-size: 11px
+    font-weight: 500
+    margin-top: 26px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 0
+      font-size: 13px
+      font-weight: bold
+      padding-left: 8px
+      background: #ffffff
+
+  &__price
+    font-size: 18px
+    font-weight: bold
+    margin-top: 20px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 0
+      padding-left: 8px
+      background: #ffffff
+
+  &__quantity
+    font-size: 13px
+    font-weight: bold
+    border: 0
+    border-bottom: 1px solid #000
+    width: 80px
+    padding: 4px 2px
+    margin-top: 22px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 0
+
+  &__delete
+    width: 23px
+    min-width: 23px
+    height: 23px
+    background: #000000
+    border: 0
+    border-radius: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    margin: 0
+    align-self: center
+    margin-left: 30px
+    cursor: pointer
+    outline: 0
+    @media (max-width: $breakpoint-md - 1)
+      align-self: flex-end
+      margin-left: 0
+      position: relative
+
+      &:before
+        content: attr(data-text)
+        display: block
+        position: absolute
+        font-size: 12px
+        font-weight: bold
+        right: 100%
+        padding-right: 15px
+        white-space nowrap
+
+    &:after
+      content: ''
+      display: block
+      background-image: url(sprite-cross.svg)
+
+  &__total
+    display: flex
+    padding: 15px 24px 12px
+    background: #f0f0f0
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction: column
+      background-color: transparent
+      align-items: stretch
+      padding: 0
+      margin-top: 89px
+
+    &-item
+      flex: 1
+      display: flex
+      font-size: 14px
+      font-weight: 400
+      align-items: center
+      border-left: 1px solid #d0d0d0
+      padding-left: 16px
+      margin-left: 16px
+      height: 19px
+      @media (max-width: $breakpoint-md - 1)
+        border-left: 0
+        padding-left: 0
+        margin-left: 0
+
+      b
+        font-size: 13px
+        font-weight: bold
+        margin-right: 4px
+
+      &:first-child
+        border-left: 0
+        padding-left: 0
+        margin-left: 0
+
+  &__summary
+    justify-content: space-between
+    align-items: center
+    @media (max-width: $breakpoint-md - 1)
+      background: #f0f0f0
+      margin-top: 22px
+      padding: 24px 13px 18px
+
+    &-text
+      font-size: 13px
+      font-weight: 900
+    &-value
+      font-size: 18px
+      font-weight: 900
+
+  &__form
+    margin-left: 48px
+    margin-top: 58px
+    width: 350px
+    @media (max-width: $breakpoint-md - 1)
+      width: auto
+      margin-left: 0
+      margin-top: 79px
+
+  &__help
+    width: 50%
+    line-height: 1.55
+    margin-bottom: 80px
+    @media (max-width: $breakpoint-md - 1)
+      width: 100%
+    h1,h2,h3,h4,h5,h6
+      font-size: 19px
+      font-weight: 900
+      margin: 0 0 021px
+
+    p
+      font-size: 13px

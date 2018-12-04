@@ -1,0 +1,46 @@
+.w.cart
+  .cart__left
+    a.cart__back НАЗАД К ПОКУПКАМ
+    .cart__title КОРЗИНА
+    .cart__items
+      .cart__clear ОЧИСТИТЬ КОРЗИНУ
+      each i in [1,2,3]
+        .cart__item
+          .cart__product
+            .cart__image(style='background-image: url(https://source.unsplash.com/random/119x73?' + i + ')')
+            .cart__info
+              .cart__name SHARME
+              .cart__description Декоративная плитка#[br]в стиле лофт
+          .cart__param
+            .cart__label КОЛЛЕКЦИЯ
+            .cart__value SHARME
+          .cart__param
+            .cart__label РАЗМЕР
+            .cart__value 30x60
+          .cart__param
+            .cart__label ПОВЕРХНОСТЬ
+            .cart__value пат.
+          .cart__param
+            .cart__label ЦЕНА ЗА М.КВ
+            .cart__price 569.–
+          .cart__param.cart__param--quantity
+            .cart__label КОЛ-ВО КВ.М.
+            input.cart__quantity(value='1')
+          button.cart__delete(data-text='УДАЛИТЬ ТОВАР')
+    .cart__total
+      .cart__total-item
+        b скидка 3%
+        | при заказе на 50000
+      .cart__total-item
+        b скидка 5%
+        | при заказе свыше 100000
+      .cart__total-item.cart__summary
+        .cart__summary-text ИТОГО:
+        .cart__summary-value 123 452 руб.
+
+  .cart__form
+    include ../cartForm/cartForm
+
+.c: .cart__help
+  h2 ВСПОМОГАТЕЛЬНЫЙ ТЕКСТ
+  p Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.

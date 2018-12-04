@@ -1,0 +1,17 @@
+.c.productDecors
+  .productDecors__title НАСТЕННАЯ ПЛИТКА КОЛЛЕКЦИИ CHARME
+  .productDecors__items
+    each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+      .productDecors__slide
+        a.productDecors__item(href='#')
+          .productDecors__image(style='background-image: url(https://source.unsplash.com/random/228x139?' + i + ')')
+          .productDecors__name ДЕКОР ШАРМ
+          .productDecors__description Декоративная плитка#[br]в стиле лофт
+          .productDecors__price 569.–
+  .productDecors__pagination
+    .pagination
+      button.pagination__prev
+      .pagination__items
+        each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+          button.pagination__item
+      button.pagination__next
