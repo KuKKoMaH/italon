@@ -2,6 +2,7 @@
   background: #f0f0f0
   padding-top: 115px
   padding-bottom: 64px
+
   @media (max-width: $breakpoint-md - 1)
     padding-top: 0
     border-top: 66px solid #fff
@@ -12,9 +13,10 @@
 
   &__container
     position: relative
-    flex-direction: column
     @media (max-width: $breakpoint-md - 1)
       padding-left: 15px
+    &.w
+      flex-direction: column
 
   &__title
     position: relative
