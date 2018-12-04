@@ -8,28 +8,31 @@ const fs = require('fs');
  * @return {Promise<String>}
  */
 function saveAsset(src) {
-  if (
-    src.indexOf('http') === 0 || // пропустить все внешние изображения
-    src.indexOf('data:') === 0 ||
-    src.indexOf('#') === 0 ||
-    src.indexOf('.') === -1 // если в атрибуте файл - то в пути должна быть точка
-  ) return Promise.resolve(src);
+  const parts = src.split(' ');
+  return Promise.all(parts.map(src => {
+    if (
+      src.indexOf('http') === 0 || // пропустить все внешние изображения
+      src.indexOf('data:') === 0 ||
+      src.indexOf('#') === 0 ||
+      src.indexOf('.') === -1 // если в атрибуте файл - то в пути должна быть точка
+    ) return Promise.resolve(src);
 
-  var srcPath = path.resolve('src', src);
+    var srcPath = path.resolve('src', src);
 
-  return new Promise(function (res) {
-    fs.stat(srcPath, function (err, stats) {
-      if (err || !stats.isFile()) return res(src);
+    return new Promise(function (res) {
+      fs.stat(srcPath, function (err, stats) {
+        if (err || !stats.isFile()) return res(src);
 
-      var name = src.replace(new RegExp(path.sep, 'g'), '-');
-      var destPath = path.resolve('build/img', name);
-      var destUrl = path.relative('build', destPath);
-      var rd = fs.createReadStream(srcPath);
-      var wr = fs.createWriteStream(destPath);
-      wr.on('close', function () {res(destUrl);});
-      rd.pipe(wr);
-    });
-  });
+        var name = src.replace(new RegExp(path.sep, 'g'), '-');
+        var destPath = path.resolve('build/img', name);
+        var destUrl = path.relative('build', destPath);
+        var rd = fs.createReadStream(srcPath);
+        var wr = fs.createWriteStream(destPath);
+        wr.on('close', function () {res(destUrl);});
+        rd.pipe(wr);
+      });
+    })
+  })).then(names => names.join(' '));
 };
 
 /**
