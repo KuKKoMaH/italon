@@ -14,7 +14,12 @@ if ($map.length) {
       const map = new google.maps.Map($map[0], {
         zoom:   16,
         center: new google.maps.LatLng(window.GOOGLE_MAP_CENTER[0], window.GOOGLE_MAP_CENTER[1]),
-        styles
+        styles,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControlOptions: {
+          position: google.maps.ControlPosition.RIGHT_BOTTOM
+        }
       });
 
       const marker = new google.maps.Marker({

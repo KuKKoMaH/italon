@@ -1,13 +1,6 @@
 extends pug/_layout
 
 block body
-  div.page.page--product
-    include modules/header/header
-    .w
-      include modules/productSlider/productSlider
-      include modules/productPrimary/productPrimary
-    include modules/productInfo/productInfo
-    .w
-      include modules/productCharacteristics/productCharacteristics
-      include modules/productAnalogue/productAnalogue
-    include modules/productDecors/productDecors
+  include modules/header/header
+  include modules/product/product
+

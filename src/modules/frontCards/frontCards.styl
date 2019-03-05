@@ -1,12 +1,19 @@
 .frontCards
   overflow: hidden
+  background: #f0f0f0
   &__hint
+    display: block
+    width: 55px
+    margin: 0 auto 70px
     text-align: center
     font-size: 13px
     font-weight: bold
-    margin-bottom: 70px
+    cursor: pointer
     @media (max-width: $breakpoint-md - 1)
       display: none
+
+    &:hover
+      text-decoration: underline
 
     &:after
       content: ''
@@ -15,6 +22,7 @@
       height: 74px
       background: #000000
       margin: 6px auto 0
+      anim()
 
   &__row
     justify-content: space-between

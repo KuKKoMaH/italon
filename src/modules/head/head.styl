@@ -2,11 +2,14 @@
   background: #f0f0f0
   padding-top: 115px
   padding-bottom: 64px
+  background-position: 50% 100%
+  background-repeat: no-repeat
 
   @media (max-width: $breakpoint-md - 1)
     padding-top: 0
     border-top: 66px solid #fff
     padding-bottom: 12px
+    background-image: none !important
 
   &--transparent
     background-color: transparent
@@ -45,26 +48,6 @@
     @media (max-width: $breakpoint-md - 1)
       display: none
 
-  &__breadcrumb
-    display: inline-block
-    font-size: 11px
-    font-weight: 900
-
-    &:hover
-      text-decoration: underline
-
-    &:before
-      content: ''
-      display: inline-block
-      vertical-align: middle
-      border: 2px solid #000
-      width: 6px
-      height: 6px
-      margin: 0 14px
-
-    &:first-child:before
-      display: none
-
   &__big-title
     position: absolute
     right: 0
@@ -72,5 +55,7 @@
     font-weight: 900
     top: 50%
     margin-top: -10px
+    margin-left: 209px
+    text-align: right
     @media (max-width: $breakpoint-md - 1)
       display: none

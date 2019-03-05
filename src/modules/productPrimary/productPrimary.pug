@@ -2,12 +2,12 @@
   h1.productPrimary__title CHARME
   .productPrimary__field ЦВЕТА
   .productPrimary__colors
-    .productPrimary__color.productPrimary__color--active: img(src='https://source.unsplash.com/random/81x81?1' width=81 height=81)
-    .productPrimary__color: img(src='https://source.unsplash.com/random/81x81?2' width=81 height=81)
-    .productPrimary__color: img(src='https://source.unsplash.com/random/81x81?3' width=81 height=81)
-    .productPrimary__color: img(src='https://source.unsplash.com/random/81x81?4' width=81 height=81)
-    .productPrimary__color: img(src='https://source.unsplash.com/random/81x81?5' width=81 height=81)
-    .productPrimary__color: img(src='https://source.unsplash.com/random/81x81?6' width=81 height=81)
+    .productPrimary__color.productPrimary__color--active(data-id='asd'): img(src='https://source.unsplash.com/random/81x81?1' width=81 height=81)
+    .productPrimary__color(data-id='test1'): img(src='https://source.unsplash.com/random/81x81?2' width=81 height=81)
+    .productPrimary__color(data-id=''): img(src='https://source.unsplash.com/random/81x81?3' width=81 height=81)
+    .productPrimary__color(data-id='test2'): img(src='https://source.unsplash.com/random/81x81?4' width=81 height=81)
+    .productPrimary__color(data-id=''): img(src='https://source.unsplash.com/random/81x81?5' width=81 height=81)
+    .productPrimary__color(data-id=''): img(src='https://source.unsplash.com/random/81x81?6' width=81 height=81)
   .productPrimary__field
     .productPrimary__variants-name РАЗМЕР
     .productPrimary__variants
@@ -33,3 +33,7 @@
       a.productPrimary__info(href='#') ГДЕ КУПИТЬ
     button.productPrimary__buy В КОРЗИНУ
 
+  script.
+    function RECALC_PRICE($items) {
+      return '100';
+    }

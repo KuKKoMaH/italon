@@ -1,6 +1,12 @@
 .frontSlider
-  height: calc(95vh - 115px)
+  background: #f0f0f0
+  padding-top: 115px
+  height: calc(100vh - 115px)
   position: relative
+  min-height: 615px
+
+  @media (max-width: $breakpoint-md - 1)
+    padding-top: 66px
   @media (max-width: $breakpoint-sm - 1)
     height: auto
 
@@ -37,7 +43,7 @@
     flex-direction: column
     align-items: flex-start
     justify-content: center
-    padding: 0 12px
+    padding: 24px 12px
     anim(.3s)
 
     @media (max-width: $breakpoint-sm - 1)
@@ -77,24 +83,29 @@
       margin-top: 11px
 
   &__price
-    margin-top: 45px
+    height: 77px
+    display: flex
+    align-items: flex-end
     font-size: 34px
     font-weight: 900
 
     @media (max-width: $breakpoint-sm - 1)
+      height: auto
       font-size: 24px
       margin-top: 24px
 
   &__more
+    height: 117px
+    display: flex
+    align-items: flex-end
     position: relative
-    margin-top: 105px
     font-size: 13px
     font-weight: bold
     text-transform: uppercase
 
     @media (max-width: $breakpoint-sm - 1)
+      height: auto
       margin-top: 25px
-
 
     &:before
       content: ''
@@ -105,7 +116,7 @@
       background: #000000
       right: 100%
       margin-right: 21px
-      top: 3px
+      bottom: 6px
 
   &__image
     position: absolute

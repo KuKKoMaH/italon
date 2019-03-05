@@ -9,39 +9,42 @@
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
   </head>
   <body onunload="">
-    <div class="page page--product">
-      <header class="header" id="header">
-        <div class="w w-c">
-          <div class="header__mobile-btn">
-            <button class="header__menu-btn"></button>
-            <button class="header__menu-close"></button>
-          </div><img class="header__logo" src="img/modules-header-italon.png" srcset="img/modules-header-italon@2x.png 2x">
-          <div class="header__mobile-menu">
-            <div class="header__menu">
-              <ul>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">каталог</a>
-                  <ul>
-                    <li><a href="#">Керамогранит напольная</a></li>
-                    <li><a href="#">Керамогранит настенная</a></li>
-                    <li><a href="#">Настенная плитка</a></li>
-                    <li><a href="#">Керамогранит Coliseum</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">проекты</a></li>
-                <li><a href="#">клиентам</a></li>
-                <li><a href="#">контакты</a></li>
-              </ul>
-            </div>
-            <div class="header__contacts">
-              <div class="header__phone">8 800 555-35-35</div>
-              <button class="header__order-btn popup__opener" href="#callback"><span>заказать обратный звонок</span></button>
-            </div>
-            <div class="header__socials"><a class="header__social header__social--vk" href="#"></a><a class="header__social header__social--fb" href="#"></a><a class="header__social header__social--inst" href="#"></a></div>
-          </div><a class="header__cart" href="#">
-            <div class="header__counter">2</div></a>
-        </div>
-      </header>
+    <header class="header" id="header">
+      <div class="w w-c">
+        <div class="header__mobile-btn">
+          <button class="header__menu-btn"></button>
+          <button class="header__menu-close"></button>
+        </div><img class="header__logo" src="img/modules-header-italon.png" srcset="img/modules-header-italon@2x.png 2x">
+        <div class="header__mobile-menu">
+          <div class="header__menu">
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">каталог</a>
+                <ul>
+                  <li><a href="#">Керамогранит напольная</a></li>
+                  <li><a href="#">Керамогранит настенная</a></li>
+                  <li><a href="#">Настенная плитка</a></li>
+                  <li><a href="#">Керамогранит Coliseum</a></li>
+                </ul>
+              </li>
+              <li><a href="#">проекты</a></li>
+              <li><a href="#">клиентам</a></li>
+              <li><a href="#">контакты</a></li>
+            </ul>
+          </div>
+          <div class="header__contacts">
+            <div class="header__phone">8 800 555-35-35</div>
+            <button class="header__order-btn popup__opener" href="#callback"><span>заказать обратный звонок</span></button>
+          </div>
+          <div class="header__socials"><a class="header__social header__social--vk" href="#"></a><a class="header__social header__social--fb" href="#"></a><a class="header__social header__social--inst" href="#"></a></div>
+        </div><a class="header__cart" href="#">
+          <div class="header__counter">2</div></a>
+      </div>
+    </header>
+    <div class="product">
+      <div class="product__breadcrumbs">
+        <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">ГЛАВНАЯ</a><a class="breadcrumbs__item" href="#">КАТАЛОГ</a><a class="breadcrumbs__item" href="#">КЕРАМОГРАНИТ</a></div>
+      </div>
       <div class="w">
         <div class="productSlider">
           <div class="productSlider__main">
@@ -70,17 +73,41 @@
               <button class="productSlider__arrow productSlider__arrow--prev"></button>
             </div>
           </div>
+          <script>
+            var CURRENT_SLIDER = 'default';
+            var PRODUCT_SLIDERS = {
+              default: [
+                ['https://source.unsplash.com/gREquCUXQLI/570x500', 'https://source.unsplash.com/gREquCUXQLI/81x81'],
+                ['https://source.unsplash.com/jn7uVeCdf6U/570x500','https://source.unsplash.com/jn7uVeCdf6U/81x81'],
+                ['https://source.unsplash.com/U-k6XLlml1I/570x500','https://source.unsplash.com/U-k6XLlml1I/81x81'],
+                ['https://source.unsplash.com/dAAk8Aqd_-I/570x500','https://source.unsplash.com/dAAk8Aqd_-I/81x81'],
+                ['https://source.unsplash.com/4HG3Ca3EzWw/570x500','https://source.unsplash.com/4HG3Ca3EzWw/81x81'],
+                ['https://source.unsplash.com/tOVmshavtoo/570x500','https://source.unsplash.com/tOVmshavtoo/81x81'],
+                ['https://source.unsplash.com/RcdV8rnXSeE/570x500','https://source.unsplash.com/RcdV8rnXSeE/81x81']
+              ],
+              test1: [
+                ['https://source.unsplash.com/gREquCUXQLI/570x500', 'https://source.unsplash.com/gREquCUXQLI/81x81'],
+                // ['https://source.unsplash.com/jn7uVeCdf6U/570x500','https://source.unsplash.com/jn7uVeCdf6U/81x81'],
+                // ['https://source.unsplash.com/U-k6XLlml1I/570x500','https://source.unsplash.com/U-k6XLlml1I/81x81']
+              ],
+              test2: [
+                ['https://source.unsplash.com/4HG3Ca3EzWw/570x500', 'https://source.unsplash.com/4HG3Ca3EzWw/81x81'],
+                ['https://source.unsplash.com/tOVmshavtoo/570x500', 'https://source.unsplash.com/tOVmshavtoo/81x81'],
+                ['https://source.unsplash.com/RcdV8rnXSeE/570x500', 'https://source.unsplash.com/RcdV8rnXSeE/81x81']
+              ]
+            }
+          </script>
         </div>
         <div class="productPrimary">
           <h1 class="productPrimary__title">CHARME</h1>
           <div class="productPrimary__field">ЦВЕТА</div>
           <div class="productPrimary__colors">
-            <div class="productPrimary__color productPrimary__color--active"><img src="https://source.unsplash.com/random/81x81?1" width="81" height="81"></div>
-            <div class="productPrimary__color"><img src="https://source.unsplash.com/random/81x81?2" width="81" height="81"></div>
-            <div class="productPrimary__color"><img src="https://source.unsplash.com/random/81x81?3" width="81" height="81"></div>
-            <div class="productPrimary__color"><img src="https://source.unsplash.com/random/81x81?4" width="81" height="81"></div>
-            <div class="productPrimary__color"><img src="https://source.unsplash.com/random/81x81?5" width="81" height="81"></div>
-            <div class="productPrimary__color"><img src="https://source.unsplash.com/random/81x81?6" width="81" height="81"></div>
+            <div class="productPrimary__color productPrimary__color--active" data-id="asd"><img src="https://source.unsplash.com/random/81x81?1" width="81" height="81"></div>
+            <div class="productPrimary__color" data-id="test1"><img src="https://source.unsplash.com/random/81x81?2" width="81" height="81"></div>
+            <div class="productPrimary__color" data-id=""><img src="https://source.unsplash.com/random/81x81?3" width="81" height="81"></div>
+            <div class="productPrimary__color" data-id="test2"><img src="https://source.unsplash.com/random/81x81?4" width="81" height="81"></div>
+            <div class="productPrimary__color" data-id=""><img src="https://source.unsplash.com/random/81x81?5" width="81" height="81"></div>
+            <div class="productPrimary__color" data-id=""><img src="https://source.unsplash.com/random/81x81?6" width="81" height="81"></div>
           </div>
           <div class="productPrimary__field">
             <div class="productPrimary__variants-name">РАЗМЕР</div>
@@ -112,6 +139,11 @@
             </div>
             <button class="productPrimary__buy">В КОРЗИНУ</button>
           </div>
+          <script>
+            function RECALC_PRICE($items) {
+              return '100';
+            }
+          </script>
         </div>
       </div>
       <div class="w productInfo">
@@ -119,87 +151,165 @@
           <h2>ЧЕРЕЗ НАСЛЕДИЕ ПРОШЛОГО К БУДУЩЕМУ</h2>
           <p>Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.</p>
         </div>
-        <div class="productInfo__links"><a class="productInfo__link productInfo__link--solutions" href="#">ИНТЕРЬЕРНЫЕ РЕШЕНИЯ</a><a class="productInfo__link productInfo__link--catalog" href="#">СМОТРЕТЬ КАТАЛОГ</a><a class="productInfo__link productInfo__link--video" href="#">ВИДЕО</a></div>
+        <div class="productInfo__links"><a class="productInfo__link productInfo__link--solutions" href="#">ИНТЕРЬЕРНЫЕ РЕШЕНИЯ</a><a class="productInfo__link productInfo__link--catalog" href="#">СМОТРЕТЬ КАТАЛОГ</a><a class="productInfo__link productInfo__link--video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">ВИДЕО</a></div>
+        <script>
+          var PRODUCT_SOLUTIONS = [
+            {
+              src: 'https://placekitten.com/600/400',
+              w:   600,
+              h:   400
+            },
+            {
+              src: 'https://placekitten.com/1200/900',
+              w:   1200,
+              h:   900
+            }
+          ];
+        </script>
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="pswp__bg"></div>
+          <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+              <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <!--button.pswp__button.pswp__button--share(title="Share")-->
+                <!--button.pswp__button.pswp__button--fs(title="Toggle fullscreen")-->
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                  <div class="pswp__preloader__icn">
+                    <div class="pswp__preloader__cut">
+                      <div class="pswp__preloader__donut"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+              </div>
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+              <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="w">
         <div class="productCharacteristics">
           <div class="productCharacteristics__title">ХАРАКТЕРИСТИКИ</div>
-          <table class="productCharacteristics__table">
-            <thead>
-              <tr>
-                <td class="productCharacteristics__price" colspan="2">РАЗМЕР
-                  <select class="productCharacteristics__select">
-                    <option value="30x60">30x60</option>
-                    <option value="59x59">59x59</option>
-                    <option value="30x60">30x60</option>
-                  </select>
-                </td>
-                <td class="productCharacteristics__type" colspan="2">ПОВЕРХНОСТЬ
-                  <select class="productCharacteristics__select">
-                    <option value="НАТУРАЛЬНАЯ">НАТУРАЛЬНАЯ</option>
-                    <option value="ПАТ.">ПАТ.</option>
-                    <option value="ЛЮКС">ЛЮКС</option>
-                  </select>
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="productCharacteristics__head">
-                <td>КОД</td>
-                <td>АРКТИКУЛ</td>
-                <td>ШТ. В КОРОБКЕ</td>
-                <td>М. КВ. В КОРОБКЕ</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-              <tr>
-                <td>5 5552 111 441</td>
-                <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
-                <td class="productCharacteristics__center">2</td>
-                <td class="productCharacteristics__center">1.44</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="4">
-                  <div class="productCharacteristics__more">ПОКАЗАТЬ ПОЛНОСТЬЮ</div>
-                  <div class="productCharacteristics__content">
-                    <div class="productCharacteristics__content-inner">
-                      <p>Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.</p>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+          <div class="productCharacteristics__head">
+            <div class="productCharacteristics__price">РАЗМЕР
+              <select class="productCharacteristics__select" id="characteristics-size">
+                <option value="30x60">30x60</option>
+                <option value="59x59">59x59</option>
+                <option value="30x60">30x60</option>
+              </select>
+            </div>
+            <div class="productCharacteristics__type">ПОВЕРХНОСТЬ
+              <select class="productCharacteristics__select" id="characteristics-surface">
+                <option value="НАТУРАЛЬНАЯ">НАТУРАЛЬНАЯ</option>
+                <option value="ПАТ.">ПАТ.</option>
+                <option value="ЛЮКС">ЛЮКС</option>
+              </select>
+            </div>
+          </div>
+          <div class="productCharacteristics__table">
+            <div class="productCharacteristics__item productCharacteristics__item--active" data-size="30x60" data-surface="НАТУРАЛЬНАЯ">
+              <table>
+                <thead>
+                  <tr>
+                    <td>КОД</td>
+                    <td>АРКТИКУЛ</td>
+                    <td>ШТ. В КОРОБКЕ</td>
+                    <td>М. КВ. В КОРОБКЕ</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="productCharacteristics__item" data-size="59x59" data-surface="НАТУРАЛЬНАЯ">
+              <table>
+                <thead>
+                  <tr>
+                    <td>КОД</td>
+                    <td>АРКТИКУЛ</td>
+                    <td>ШТ. В КОРОБКЕ</td>
+                    <td>М. КВ. В КОРОБКЕ</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                  <tr>
+                    <td>5 5552 111 441</td>
+                    <td>ШАР.ЭКС.ЛАЗА 60Х 12рет</td>
+                    <td class="productCharacteristics__center">2</td>
+                    <td class="productCharacteristics__center">1.44</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="productCharacteristics__more">ПОКАЗАТЬ ПОЛНОСТЬЮ</div>
+          <div class="productCharacteristics__content">
+            <div class="productCharacteristics__content-inner">
+              <p>Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.</p>
+            </div>
+          </div>
         </div>
         <div class="productAnalogue">
           <div class="productAnalogue__title">НАСТЕННАЯ ПЛИТКА КОЛЛЕКЦИИ CHARME</div>
@@ -221,62 +331,74 @@
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?1)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="1"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?2)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="2"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?3)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="3"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?4)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="4"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?5)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="5"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?6)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="6"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?7)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="7"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?8)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="8"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?9)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="9"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?10)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="10"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?11)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="11"></button></a></div>
           <div class="productDecors__slide"><a class="productDecors__item" href="#">
               <div class="productDecors__image" style="background-image: url(https://source.unsplash.com/random/228x139?12)"></div>
               <div class="productDecors__name">ДЕКОР ШАРМ</div>
               <div class="productDecors__description">Декоративная плитка<br>в стиле лофт</div>
-              <div class="productDecors__price">569.–</div></a></div>
+              <div class="productDecors__price">569.–</div>
+              <button class="productDecors__buy" data-id="12"></button></a></div>
         </div>
         <div class="productDecors__pagination">
           <div class="pagination">
@@ -341,7 +463,7 @@
         </div>
       </div>
       <div class="w footer__content">
-        <div class="footer__info"><img class="footer__logo" src="/modules/footer/italon.png" srcset="/modules/footer/italon@2x.png 2x">
+        <div class="footer__info"><img class="footer__logo" src="img/modules-footer-italon.png" srcset="img/modules-footer-italon@2x.png 2x">
           <div class="footer__copyright">Использование материалов сайта<br>без согласования запрещено!<br>Copyright © 2018</div>
         </div>
         <div class="footer__socials"><a class="footer__social footer__social--vk" href="#"></a><a class="footer__social footer__social--fb" href="#"></a><a class="footer__social footer__social--inst" href="#"></a></div><img class="footer__logo footer__logo--small" src="/modules/footer/italon.png" srcset="/modules/footer/italon@2x.png 2x">
@@ -365,7 +487,7 @@
     </div>
   </body>
   <script>
-    var GOOGLE_MAP_API_KEY = "AIzaSyAKCWqbAVy8AsekfYEuddPMtdb5xMpC9pk";
+    var GOOGLE_MAP_API_KEY = "AIzaSyC6IirOGPNFkGq2z55A1w695igpvg48jCk";
     var GOOGLE_MAP_CENTER = [53.189798, 45.039265];
   </script>
   <script src="js/app.js"></script>

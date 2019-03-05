@@ -2,14 +2,14 @@
   .catalogContent__sub
     .catalogContent__total НАЙДЕНО 576 ТОВАРОВ
     label.catalogContent__available
-      input(type='checkbox')
+      input#available(type='checkbox')
       | ТОВАР В НАЛИЧИИ
     .catalogContent__sort
       | СОРТИРОВАТЬ:
-      select
-        option ПО ЦЕНЕ
-        option ПО ЦЕНЕ
-        option ПО ЦЕНЕ
+      select.catalogContent__sort-select
+        option(value='1') ПО НОВИЗНЕ
+        option(value='2') ПО УБВАНИЮ ЦЕНЫ
+        option(value='3') ПО ВОЗРАСТАНИЮ ЦЕНЫ
     include ../pagination/pagination
 
   .catalogContent__items

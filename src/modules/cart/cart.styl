@@ -71,6 +71,7 @@
 
   &__image
     width: 119px
+    min-width: 119px
     height: 73px
     background-size: cover
     background-position: 50% 50%
@@ -89,8 +90,10 @@
     line-height: 1.65
 
   &__param
+    margin-left: 12px
     @media (max-width: $breakpoint-md - 1)
       display: flex
+      margin-left: 0px
       justify-content: space-between
       margin-bottom: 39px
       position: relative

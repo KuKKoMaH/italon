@@ -19,6 +19,55 @@
     margin-left: auto
     margin-right: 65px
 
+    &-select
+      &.selectize-control
+        display: inline-block
+        margin-left: 11px
+        //border-bottom: 1px dashed #b9b9b9
+
+      .selectize-input
+        padding-right: 15px
+        position: relative
+        font-size: 12px
+        font-weight: bold
+        line-height: 1.2
+
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          top: 50%
+          margin-top: -3px
+          right: 2px
+          background: url(../../images/sprite-arrow.svg)
+
+        &.focus:after
+          transform: rotate(180deg)
+
+        .item
+          display: inline-block
+          vertical-align: middle
+
+        > input
+          display: none !important
+
+      .selectize-dropdown
+        position: absolute
+        margin: 1px 0 0
+        max-height: 300px
+        overflow: auto
+        z-index: 1
+        cursor: pointer
+        background: #fff
+        width: auto !important
+
+        .option
+          padding: 5px 3px
+          anim()
+          &:hover
+            background: #f0f0f0
+
+
   &__items
     display: flex
     flex-direction: row

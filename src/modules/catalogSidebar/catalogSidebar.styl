@@ -1,5 +1,5 @@
 .catalogSidebar
-  margin-bottom: 50px
+  //margin-bottom: 50px
   position: relative
 
   @media (max-width: $breakpoint-md - 1)
@@ -35,6 +35,9 @@
 
     &--active:after
       background: url(sprite-line.svg)
+
+    &--static:after
+      display: none
 
   &__item
     display: flex
@@ -173,3 +176,57 @@
     color: #888888
     margin-top: 12px
     margin-bottom: 20px
+
+  &__filter
+
+    &--active
+      & ^[1]-container
+        height: auto
+
+      & ^[1]-toggle
+        &:after
+          content: ''
+          display: block
+          background: url(./sprite-line.svg)
+          margin-top: -4px
+          margin-left: 10px
+          @media (max-width: $breakpoint-md - 1)
+            margin-left: auto
+
+    &-toggle
+      cursor: pointer
+
+    &-container
+      overflow: hidden
+      padding-left: 12px
+      height: 0
+      anim()
+
+    &-item
+      display: flex
+      font-family: 'Gilroy', sans-serif
+      font-size: 13px
+      color: #888888
+      padding-bottom: 12px
+      &:last-child
+        padding-bottom: 24px
+
+      &--active
+        color: #000000
+        font-weight: bold
+
+    &-items
+      &--images
+        display: flex
+        flex-wrap: wrap
+        margin: 0 -6px
+        padding-bottom: 12px
+        & ^[1]-item
+          border: 3px solid transparent
+          padding: 3px
+          margin: 0 -2px
+          anim()
+          &--active
+            border: 3px solid #000
+          img
+            display: block

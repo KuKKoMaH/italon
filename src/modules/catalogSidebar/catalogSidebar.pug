@@ -6,25 +6,44 @@
     a.catalogSidebar__item(href='#') Керамогранит напольный #[span.catalogSidebar__count 43]
     a.catalogSidebar__item(href='#') Керамогранит настенный #[span.catalogSidebar__count 43]
 
-  a.catalogSidebar__title.catalogSidebar__title--active(href='#') КОЛЛЕКЦИИ
-  .catalogSidebar__category
-    a.catalogSidebar__item(href='#') Charme #[span.catalogSidebar__count 43]
-    a.catalogSidebar__item(href='#') Genesis #[span.catalogSidebar__count 43]
-    a.catalogSidebar__item(href='#') Materia #[span.catalogSidebar__count 43]
-    a.catalogSidebar__item(href='#') Charme #[span.catalogSidebar__count 43]
-    a.catalogSidebar__item(href='#') Genesis #[span.catalogSidebar__count 43]
-    a.catalogSidebar__item(href='#') Materia #[span.catalogSidebar__count 43]
+  .catalogSidebar__filter
+    .catalogSidebar__title.catalogSidebar__filter-toggle КОЛЛЕКЦИИ
+    .catalogSidebar__filter-container
+      .catalogSidebar__filter-items
+        a.catalogSidebar__filter-item(href='#') Charme #[span.catalogSidebar__count 43]
+        a.catalogSidebar__filter-item(href='#') Genesis #[span.catalogSidebar__count 43]
+        a.catalogSidebar__filter-item(href='#') Materia #[span.catalogSidebar__count 43]
+        a.catalogSidebar__filter-item(href='#') Charme #[span.catalogSidebar__count 43]
+        a.catalogSidebar__filter-item(href='#') Genesis #[span.catalogSidebar__count 43]
+        a.catalogSidebar__filter-item(href='#') Materia #[span.catalogSidebar__count 43]
 
-  a.catalogSidebar__title(href='#') НАСТЕННАЯ ПЛИТКА
+  a.catalogSidebar__title.catalogSidebar__title--static(href='#') НАСТЕННАЯ ПЛИТКА
 
   .catalogSidebar__filters-button ФИЛЬТРЫ
   .catalogSidebar__filters
     .catalogSidebar__filters-close
     .catalogSidebar__header ФИЛЬТРЫ
-    .catalogSidebar__title ЦЕНА
-    .catalogSidebar__slider
+    .catalogSidebar__title.catalogSidebar__title--static ЦЕНА
+    .catalogSidebar__slider(data-from='2000' data-to='3000' data-min='1000' data-max='6000')
     .catalogSidebar__slider-value
 
-    a.catalogSidebar__title(href='#') ЦВЕТА
-    a.catalogSidebar__title(href='#') РАЗМЕР
-    a.catalogSidebar__title(href='#') ПОВЕРХНОСТЬ
+    .catalogSidebar__filter
+      .catalogSidebar__title.catalogSidebar__filter-toggle ЦВЕТА
+      .catalogSidebar__filter-container
+        .catalogSidebar__filter-items.catalogSidebar__filter-items--images
+          a.catalogSidebar__filter-item.catalogSidebar__filter-item--active(href='#'): img(src='https://source.unsplash.com/random/40x40?1' width=40 height=40)
+          a.catalogSidebar__filter-item(href='#'): img(src='https://source.unsplash.com/random/40x40?2' width=40 height=40)
+          a.catalogSidebar__filter-item(href='#'): img(src='https://source.unsplash.com/random/40x40?3' width=40 height=40)
+          a.catalogSidebar__filter-item.catalogSidebar__filter-item--active(href='#'): img(src='https://source.unsplash.com/random/40x40?1' width=40 height=40)
+          a.catalogSidebar__filter-item(href='#'): img(src='https://source.unsplash.com/random/40x40?2' width=40 height=40)
+          a.catalogSidebar__filter-item(href='#'): img(src='https://source.unsplash.com/random/40x40?3' width=40 height=40)
+
+    .catalogSidebar__filter.catalogSidebar__filter--active
+      .catalogSidebar__title.catalogSidebar__filter-toggle РАЗМЕР
+      .catalogSidebar__filter-container
+        .catalogSidebar__filter-items
+          a.catalogSidebar__filter-item.catalogSidebar__filter-item--active(href='#') 30x40
+          a.catalogSidebar__filter-item(href='#') 40x40
+          a.catalogSidebar__filter-item(href='#') 40x50
+
+    .catalogSidebar__title.catalogSidebar__filter-toggle ПОВЕРХНОСТЬ

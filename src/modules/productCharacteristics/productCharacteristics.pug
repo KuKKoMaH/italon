@@ -1,37 +1,52 @@
 .productCharacteristics
   .productCharacteristics__title ХАРАКТЕРИСТИКИ
-  table.productCharacteristics__table
-    thead
-      tr
-        td(colspan=2).productCharacteristics__price
-          | РАЗМЕР
-          select.productCharacteristics__select
-            option(value='30x60') 30x60
-            option(value='59x59') 59x59
-            option(value='30x60') 30x60
+  .productCharacteristics__head
+    .productCharacteristics__price
+      | РАЗМЕР
+      select.productCharacteristics__select(id='characteristics-size')
+        option(value='30x60') 30x60
+        option(value='59x59') 59x59
+        option(value='30x60') 30x60
 
-        td(colspan=2).productCharacteristics__type
-          | ПОВЕРХНОСТЬ
-          select.productCharacteristics__select
-            option(value='НАТУРАЛЬНАЯ') НАТУРАЛЬНАЯ
-            option(value='ПАТ.') ПАТ.
-            option(value='ЛЮКС') ЛЮКС
-    tbody
-      tr.productCharacteristics__head
-        td КОД
-        td АРКТИКУЛ
-        td ШТ. В КОРОБКЕ
-        td М. КВ. В КОРОБКЕ
-      each i in [1,2,3,4,5,6]
-        tr
-          td 5 5552 111 441
-          td ШАР.ЭКС.ЛАЗА 60Х 12рет
-          td.productCharacteristics__center 2
-          td.productCharacteristics__center 1.44
-    tfoot
-      tr
-        td(colspan=4)
-          .productCharacteristics__more ПОКАЗАТЬ ПОЛНОСТЬЮ
-          .productCharacteristics__content
-            .productCharacteristics__content-inner
-              p Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.
+    .productCharacteristics__type
+      | ПОВЕРХНОСТЬ
+      select.productCharacteristics__select(id='characteristics-surface')
+        option(value='НАТУРАЛЬНАЯ') НАТУРАЛЬНАЯ
+        option(value='ПАТ.') ПАТ.
+        option(value='ЛЮКС') ЛЮКС
+  .productCharacteristics__table
+    .productCharacteristics__item.productCharacteristics__item--active(data-size='30x60' data-surface='НАТУРАЛЬНАЯ')
+      table
+        thead
+          tr
+            td КОД
+            td АРКТИКУЛ
+            td ШТ. В КОРОБКЕ
+            td М. КВ. В КОРОБКЕ
+        tbody
+          each i in [1,2,3,4,5,6]
+            tr
+              td 5 5552 111 441
+              td ШАР.ЭКС.ЛАЗА 60Х 12рет
+              td.productCharacteristics__center 2
+              td.productCharacteristics__center 1.44
+    .productCharacteristics__item(data-size='59x59' data-surface='НАТУРАЛЬНАЯ')
+      table
+        thead
+          tr
+            td КОД
+            td АРКТИКУЛ
+            td ШТ. В КОРОБКЕ
+            td М. КВ. В КОРОБКЕ
+        tbody
+          each i in [1,2,3]
+            tr
+              td 5 5552 111 441
+              td ШАР.ЭКС.ЛАЗА 60Х 12рет
+              td.productCharacteristics__center 2
+              td.productCharacteristics__center 1.44
+
+  .productCharacteristics__more ПОКАЗАТЬ ПОЛНОСТЬЮ
+  .productCharacteristics__content
+    .productCharacteristics__content-inner
+      p Коллекция Charme Extra интерпретирует интерьер, как диалог между наследием прошлого и будущим: неизменная сущность мрамора находит новое выражение в современных проектах. Через интерьеры, обладающие непревзойденным шармом, выражается новый стиль, подчеркивающий неформальный, но утонченный дух роскоши.

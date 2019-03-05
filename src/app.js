@@ -10,6 +10,7 @@ import 'selectize';
 import './modules/header/header';
 import './modules/frontSlider/frontSlider';
 import './modules/catalogSidebar/catalogSidebar';
+import './modules/catalogContent/catalogContent';
 import './modules/projects/projects';
 import './modules/projectSlider/projectSlider';
 import './modules/productSlider/productSlider';
@@ -18,6 +19,8 @@ import './modules/productCharacteristics/productCharacteristics';
 import './modules/productDecors/productDecors';
 import './modules/map/map';
 import './modules/cartForm/cartForm';
+import './modules/productInfo/productInfo';
+import './modules/cart/cart';
 
 $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
