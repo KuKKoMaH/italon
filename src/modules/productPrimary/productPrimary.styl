@@ -25,6 +25,7 @@
 
   &__colors
     display: flex
+    align-items: center
     flex-wrap: wrap
     margin-top: 11px
     overflow: auto
@@ -33,12 +34,20 @@
   &__color
     border: 3px solid transparent
     padding: 3px
-    margin: 0 -2px
+    margin: 6px -2px
+    width: 81px
+    height: 81px
     anim()
     &--active
       border: 3px solid #000
+      width: 93px
+      height: 93px
+      margin-top: 0
+      margin-bottom: 0
     img
       display: block
+      width: 100%
+      height: 100%
 
   &__variants-name
     width: 160px
