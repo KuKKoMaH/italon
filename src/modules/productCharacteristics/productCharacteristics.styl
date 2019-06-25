@@ -1,8 +1,11 @@
 .productCharacteristics
   flex: 1
-  margin-right: 100px
   @media (max-width: $breakpoint-md - 1)
     display: none
+
+  &__inner
+    margin-right: 100px
+
   &__title
     font-size: 19px
     font-weight: 900
@@ -21,6 +24,7 @@
   &__table
     border: 1px solid #DDDDDD
     border-spacing: 0
+
     table
       width: 100% !important
 
@@ -32,7 +36,7 @@
     td
       font-size: 11px
       font-weight: 500
-      padding: 0 18px
+      //padding: 0 18px
       padding-top: 16px
       &:first-child
         padding-left: 29px

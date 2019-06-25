@@ -36,5 +36,47 @@ $('.productPrimary__variant').on('click', (e) => {
 });
 
 $('.productPrimary__buy').on('click', (e) => {
-  if(window.ON_PRODUCT_BUY) window.ON_PRODUCT_BUY(getFilters());
+  if (window.ON_PRODUCT_BUY) window.ON_PRODUCT_BUY(getFilters());
 });
+
+if ($colors.length) {
+  const $preview = $("<div class='preview'><img src='' alt='Image preview' /></div>");
+  $("body").append($preview);
+  let previewActive = false;
+  let x = 0;
+  let y = 0;
+  let width = 0;
+  let height = 0;
+  const positionatePreview = () => {
+    let transform = '';
+    if (x + width + 12 > window.innerWidth) {
+      transform = `translate3d(${x - width}px, ${y}px, 0)`
+    } else {
+      transform = `translate3d(${x}px, ${y}px, 0)`;
+    }
+    $preview.css('transform', transform);
+  };
+
+  $(window).mousemove((e) => {
+    x = e.pageX;
+    y = e.pageY;
+    if (previewActive) positionatePreview();
+  });
+
+  $colors.hover(
+    function (e) {
+      const $el = $(this);
+      width = $el.data('width');
+      height = $el.data('height');
+      $preview.find('img')
+        .attr('src', $el.data('preview'))
+        .css({ width, height, });
+      $preview.addClass('preview--active');
+      previewActive = true;
+      positionatePreview();
+    },
+    function () {
+      $preview.removeClass('preview--active');
+      previewActive = false;
+    });
+}

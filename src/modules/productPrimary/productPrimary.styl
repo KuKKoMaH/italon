@@ -34,16 +34,13 @@
   &__color
     border: 3px solid transparent
     padding: 3px
-    margin: 6px -2px
+    margin: 0px -2px
     width: 81px
     height: 81px
     anim()
     &--active
       border: 3px solid #000
-      width: 93px
-      height: 93px
-      margin-top: 0
-      margin-bottom: 0
+
     img
       display: block
       width: 100%
@@ -132,3 +129,20 @@
 
     &:active
       background: #333
+
+.preview
+  position:fixed;
+  border:1px solid #ccc;
+  background:#333;
+  padding:5px;
+  color:#fff;
+  opacity: 0
+  transition: opacity .1s ease-out
+  top: 0
+  left: 0
+  pointer-events: none
+  &--active
+    opacity: 1
+
+  img
+    display: block

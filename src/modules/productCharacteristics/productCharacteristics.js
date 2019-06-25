@@ -1,7 +1,14 @@
-$('.productCharacteristics__more').on('click', () => {
-  $('.productCharacteristics__content').css({
-    height: $('.productCharacteristics__content-inner').outerHeight(),
-  })
+const $more = $('.productCharacteristics__more');
+$more.on('click', () => {
+  if ($more.hasClass('active')) {
+    $('.productCharacteristics__content').css({ height: 0, });
+    $more.removeClass('active');
+  } else {
+    $('.productCharacteristics__content').css({
+      height: $('.productCharacteristics__content-inner').outerHeight(),
+    });
+    $more.addClass('active');
+  }
 });
 
 const $select = $('.productCharacteristics__select');

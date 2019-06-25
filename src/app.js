@@ -6,7 +6,6 @@ import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'selectize';
 
-// import './js/$.debounce';
 import './modules/header/header';
 import './modules/frontSlider/frontSlider';
 import './modules/catalogSidebar/catalogSidebar';
